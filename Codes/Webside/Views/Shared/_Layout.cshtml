@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuDoLink | Blockchain+Shared Economy+Computer Intelligence</title>
+    <meta name="keywords" content="TuDoLink,TuDoLink Blockchain,Graph Databases,Shared Computing Resources, Idle Computing Resourses ">
+    <meta name="description" content="TuDoLink is a Sharing & Trading Platform of Idle Computing Resources Based on Blockchain Technology, Build the Largest Global Decentralized Distributed Network Computing System & Graph Databases">
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="icons/font-awesome/css/font-awesome.css">
+
+
+    <style type="text/css">
+        @@media (max-width: 767px) {
+            .section.splash h1 {
+                padding-top: 15px;
+                font-size: 18px;
+            }
+
+            .splash-block p {
+                font-size: 14px;
+            }
+
+            .centered {
+                padding: 80px 0;
+            }
+        }
+
+        .home-main-nav-lang {
+            float: left;
+            border-left: 1px solid #fff;
+            padding-left: 12px;
+            margin-top: 22px;
+            margin-left: 20px;
+            color: #fff;
+            line-height: 1;
+            cursor: pointer;
+            font-size: 15px;
+        }
+         
+        .text-center {
+            font-size: 30px;
+            font-weight: 500
+        }
+
+        .px-5 {
+            height: 56px;
+            width: 156px;
+        }
+    </style>
+     
+    @RenderSection("PageSpecificStyleSheetIncludes", required: false)
+</head>
+<body>
+
+    <header class="header" id="jump">
+        <nav class="navbar  navbar-fixed-top" role="navigation" id="navbar" style="background: #000;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Title</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://tudolink.io/"><img src="@Url.Content("~/images/Logo.png")" alt="" /></a>
+                </div>
+                <div class="collapse navbar-collapse hidden-xs">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#jump0">Home</a></li>
+                        <li><a href="#jump1">Introduction</a></li>
+                        <!--<li><a href="#jump2">Future Features</a></li>-->
+                        <!--<li><a href="#jump3">Business</a></li>-->
+                        <!----><li><a href="#jump4">Timeline</a></li>
+                        <li><a href="#jump5">Team</a></li>
+                        <!--<li><a href="#jump6">Subscribe</a></li>-->
+                        <!--<li><a href="#jump7">Community</a></li>-->
+                        <li><a href="/white/index" onclick="window.location.href='/white/index'" target="_blank" style="color: #fff;">White Paper</a></li>
+                        <li><a href="https://tudolink.io/account/Login" onclick="window.location.href = 'https://tudolink.io/account/Login'" style="color: #fff;">KYC</a></li>
+
+                    </ul>
+                </div>
+  		<div class="collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://tudolink.io/Home/Index#jump0" data-toggle="collapse" data-target=".navbar-responsive-collapse">Home</a></li>
+                        <li><a href="https://tudolink.io/Home/Index#jump1" data-toggle="collapse" data-target=".navbar-responsive-collapse">Introduction</a></li>
+                        <!--<li><a href="https://tudolink.io/Home/Index#jump2" data-toggle="collapse" data-target=".navbar-responsive-collapse">Future Features</a></li>-->
+                        <!-- <li><a href="https://tudolink.io/Home/Index#jump3" data-toggle="collapse" data-target=".navbar-responsive-collapse">Business</a></li>-->
+                        <!----><li><a href="https://tudolink.io/Home/Index#jump4" data-toggle="collapse" data-target=".navbar-responsive-collapse">Timeline</a></li>
+                        <!----><li><a href="https://tudolink.io/Home/Index#jump5" data-toggle="collapse" data-target=".navbar-responsive-collapse">Team</a></li>
+                        <!--<li><a href="https://tudolink.io/Home/Index#jump6" data-toggle="collapse" data-target=".navbar-responsive-collapse">Subscribe</a></li>-->
+                        <!--<li><a href="https://tudolink.io/Home/Index#jump7" data-toggle="collapse" data-target=".navbar-responsive-collapse">Community</a></li>-->
+                        <li><a href="/white/index" onclick="window.location.href='/white/index'" target="_blank" style="color: #fff;">White Paper</a></li>
+
+                        <li><a href="https://tudolink.io/account/Login" onclick="window.location.href = 'https://tudolink.io/account/Login'" style="color: #fff;">KYC</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+
+    @if (!IsSectionDefined("footer"))
+{
+  <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 bottom-box">
+                        <ul>
+                            <li><a href="https://github.com/TuDoLink/" target="_blank"><div class="link1" style="background: url(/images/icons/1.png);height: 50px;"></div></a></li>
+                            <li><a href="https://t.me/tudolink/" target="_blank"><div class="link1" style="background: url(/images/icons/3.png);height: 50px;"></div></a></li>
+                            <li><a href="@("https://medium.com/@tudolink/")" target="_blank"><div class="link2" style="background: url(/images/icons/2.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.reddit.com/user/tudolinkproject/" target="_blank"><div class="link3" style="background: url(/images/icons/4.png);height: 50px;"></div></a></li>
+                            <li><a href="https://twitter.com/TuDoLinkProject/" target="_blank"><div class="link4" style="background: url(/images/icons/5.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.facebook.com/tudolinkproject/" target="_blank"><div class="link5" style="background: url(/images/icons/6.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.linkedin.com/company/tudolink/" target="_blank"><div class="link6" style="background: url(/images/icons/7.png);height: 50px;"></div></a></li>
+                            <li><a href="#"><div class="link7" style="background: url(/images/icons/8.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=uCKhzZe76_E/" target="_blank"><div class="link8" style="background: url(/images/icons/9.png);height: 50px;"></div></a></li>
+                        </ul>
+                        <p>www.TuDoLink.io     All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    }
+    else
+    {
+        @RenderSection("footer", required: false)
+    }
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("PageSpecificJavascriptIncludes", required: false)
+</body>
+</html>

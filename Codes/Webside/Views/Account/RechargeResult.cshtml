@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "ValidEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="padding:100px 0 320px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <div id="verify-email-success" class="alert alert-success" role="alert" style="display: none">
+            </div>
+            <div id="verify-email-alert" class="alert alert-danger" role="alert" style="display: none">
+            </div>
+            <h1>Your Desired Contributions has been recorded </h1>
+            <p> We will send the final result to your Email .</p>
+            <p> Thank you for your support.</p>
+            <p> Automatic jump afte <span id="sec">5</span> seconds. </p>
+            <p>If this webpage is not jumping, Please <a href="/Home/Index">Click Here.</a></p>
+        </div>
+    </div><!--.row-->
+</div>
+
+
+
+@section PageSpecificJavascriptIncludes{
+
+    <script type="text/javascript">
+        $(function () {
+            setTimeout("lazyGo();", 1000);
+        });
+        function lazyGo() {
+            var sec = $("#sec").text();
+            $("#sec").text(--sec);
+            if (sec > 0) {
+                setTimeout("lazyGo();", 1000);
+            }
+            else {
+                window.location.href = "/Home/Index";
+            }
+        }
+    </script>
+
+
+}
+

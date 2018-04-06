@@ -1,0 +1,1069 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+@section PageSpecificStyleSheetIncludes{
+    <style type="text/css">
+        @@media (max-width: 767px) {
+            .section.splash h1 {
+                padding-top: 15px;
+                font-size: 18px;
+            }
+
+            .splash-block p {
+                font-size: 14px;
+            }
+
+            .centered {
+                padding: 80px 0;
+            }
+        }
+
+        .home-main-nav-lang {
+            float: left;
+            border-left: 1px solid #fff;
+            padding-left: 12px;
+            margin-top: 22px;
+            margin-left: 20px;
+            color: #fff;
+            line-height: 1;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .nav-bnt {
+            background-color: #fafafa;
+            background-image: -moz-linear-gradient(top,#0ab2e3,#0388b1);
+            background-image: -webkit-gradient(linear,0 0,0 100%,from(#0ab2e3),to(#0388b1));
+            background-image: -webkit-linear-gradient(top,#0ab2e3,#0388b1);
+            background-image: -o-linear-gradient(top,#0ab2e3,#0388b1);
+            background-image: linear-gradient(to bottom,#0ab2e3,#0388b1);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
+            -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+            -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+        }
+           .team_body h5 a{position: relative;background: url(images/icon1.png);height: 20px;width: 20px;margin-left: 5px;display: inline-block;top: 3px;}
+    </style>
+
+
+}
+
+
+
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header nav-bnt" style="background-color: #fafafa;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="    margin-top: 9px;">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-size: 28px; color:#fff;">
+
+                    Subscribe
+                </h4>
+            </div>
+            <div class="modal-body">
+                <img width="120" height="100" src="/images/email.png" alt="email" style="display: block; float: left;">
+                <h2 style="float: left;display: block; width: 410px; padding: 20px 0 0 15px;">  Subscribe to our newsletter and never miss any updates.</h2>
+                <form method="" action="">
+                    <p>
+
+
+                    </p>
+                </form>
+
+            </div>
+            <div style="clear: both;"></div>
+            <div class="modal-footer form-inline" style="margin-top: 0px;">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Please enter your email address." style="height: 50px; width: 410px;">
+                </div>
+                <button type="button" class="btn  nav-bnt" style="height: 54px; border-radius: 5px; color:#fff;">
+                    Subscription!
+                </button> 
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+
+<div class="jumper" id="jump0"></div>
+<div class="section type-1 big splash">
+    <div class="container">
+
+        <div class="splash-block">
+            <div class="centered">
+                <div class="container">
+                    <div class="section-headlines">
+                        <h1 style="margin-top: -150px;"></h1>
+                        <img src="/images/logo2.png" >
+                        <!--<h1 style="margin-top: 20px;">Enables Distributed Infrastructure for Bigdata</h1>-->
+
+                        <h1 style="margin-top: 20px;">Not only rooms or cars could be shared, smart devices/computers could also be shared!</h1>
+
+                        <p>A Sharing & Trading Platform of Idle Computing Resources Based on Blockchain Technology.</p>
+                    </div>
+                    <!---->
+                    <a href="/account/login" class="btn btn-outline btn-lg">KYC</a> &nbsp; 
+                    <a href="/white/index" class="btn btn-outline btn-lg"> White Paper</a>
+                    <a href="" class="btn btn-outline btn-lg"> Yellow Paper</a>
+                    <a href="" class="btn btn-outline btn-lg"> One Pager</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+</div>
+
+<!-- 
+<section id="clients">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"><img src="/images/clients/partner1-150x100.png" alt="" /></div>
+            <div class="col-lg-2"><img src="/images/clients/partner2.png" alt="" /></div>
+            <div class="col-lg-2"><img src="/images/clients/partner3.png" alt="" /></div>
+            <div class="col-lg-2"><img src="/images/clients/partner4.png" alt="" /></div>
+            <div class="col-lg-2"><img src="/images/clients/partner5.png" alt="" /></div>
+            <div class="col-lg-2"><img src="/images/clients/partner6-150x100.png" alt="" /></div>
+        </div>
+    </div>
+
+</section>
+-->
+
+<!-- Introduction-->
+<div id="jump1" class="jumper"></div>
+<div class="section type-1">
+    <div class="container">
+        <div class="section-headlines">
+            <h4>Introduction</h4>
+            <h2>What is TuDoLink?</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 features text-center"> <img src="/images/pic3-450x410.png" alt="" style="padding-top: 40px; width: 100%;"> </div>
+            <div class="col-lg-6 features">
+                <div class="media" style="margin-top: 20px;">
+                    <i class=" icon-globe pull-left animated bounce"></i>
+                    <div class="media-body">
+                        <h3>A Sharing Platform</h3>
+                        <div>You could share idle computing resources of your smartphones or computers on TuDoLink and contribute to cure diseases, study neural networks and do many other types of scientific research. Meanwhile, you could obtain honor certificates from corresponding research institutions.</div>
+                    </div>
+                </div>
+                <br class="gap-30" />
+                <div class="media">
+                    <i class=" icon-shopping-cart pull-left animated bounce"></i>
+                    <div class="media-body">
+                        <h3>A Trading Platform</h3>
+                        <div>You could lease your idle computing resources to researchers, developers, miners or companys. In the same way, you could rent idle computing resources on the TuDoLink platform. TuDoLink offers insurance, called its "program guarantee", which covers property damage caused by the program in the TuDoLink.</div>
+                    </div>
+                </div>
+                <br class="gap-30" />
+                <div class="media">
+                    <i class=" icon-rocket pull-left animated bounce"></i>
+                    <div class="media-body">
+                        <h3>A Super Networking Computer</h3>
+                        <div>
+                            You could obtain a distributed network computing system which contains thousands of CPUs and GPUs and the system could be used for your projects, researches, experiments or programs and so on.
+                        </div>
+                    </div>
+                </div>
+                <br class="gap-30" />
+                <div class="media">
+                    <i class=" icon-link pull-left animated bounce"></i>
+                    <div class="media-body">
+                        <h3>A Blockchain Project</h3>
+                        <div>Blockchain and cryptocurrency technologies build trust and incentive for users of TuDoLink. We release a cryptocurrency which is used in the sharing and trading platform. Users could get the cryptocurrency by sharing or renting their resources.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+<!-- R & D plank 
+<div id="jump2" class="jumper"></div>
+<div class="section type-1" style="padding-bottom: 0">
+
+    <div class="container">
+        <div class="section-headlines">
+            <h4>R & D plan</h4>
+            <h2>Evolution never stops.</h2>
+            <div>We have three main steps: build a graph database network based on blockchain, establish a sharing platform of idle computing resources based on blockchain and build a global decentralized distributed network computing system.</div>
+        </div>
+
+
+        <div style="padding:20px 0 50px 0 ">
+            <div class="row">
+                <div class="col-lg-6 features text-center"> <img src="/images/jidian.gif" alt="" style="border-radius: 50px;width: 100%;height:235px;" /> </div>
+                <div class="col-lg-6 features">
+                    <div class="media">
+                        <div class="media-body" style=" padding:20px 15px;    line-height: 26px;">
+                            <h1>Proxima</h1>
+                            <h3>Graph database network based on blockchain</h3>
+                            <div>
+                                TuDoLink will creat the world's largest distributed draph database based on blockchain. This database will belong to everyone who contributes computing resources. TuDoLink provides a complete and conveniently deployed solution for the decentralized database application.  All kinds of data can be arbitrary and convenient storage on the TuDoLink Graph Database. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="gap-30" />
+            <div class="row hidden-xs">
+                <div class="col-lg-6 features">
+                    <div class="media">
+                        <div class="media-body" style=" padding:20px 15px;    line-height: 26px;">
+                            <h1 class="hidden-xs">Andromeda nebula</h1>
+                            <h3 class="hidden-xs">Sharing platform of idle computing resources </h3>
+                            <div class="hidden-xs">We creat a platform for sharing idle computing resources based on blockchain. A computer or smart phone could become a node by sharing its computing resources, such as spaces of hard drive and memories and computing power of CPUs and GPUs etc. People could get TuDoLinkGas Network Tokens by sharing their computing resources. The more people share their computers or smart phones the more powerful the TuDoLink will be. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 features text-center"> <img class="hidden-xs" src="/images/xingxi.gif" alt="" style="border-radius: 50px; width: 100%;height: 235px;" /></div>
+            </div>
+
+            <div class="row visible-xs">
+                <div class="col-lg-6 features text-center"> <img class="visible-xs" src="/images/xingxi.gif" alt="" style="border-radius: 50px; width: 100%;height: 235px;" /> </div>
+                <div class="col-lg-6 features">
+                    <div class="media">
+                        <div class="media-body" style=" padding:20px 15px;    line-height: 26px;">
+                            <h1 class="visible-xs">Andromeda nebula</h1>
+                            <h3 class="visible-xs">Sharing platform of idle computing resources </h3>
+                            <div class="visible-xs">We creat a platform for sharing idle computing resources based on blockchain. A computer or smart phone could become a node by sharing its computing resources, such as spaces of hard drive and memories and computing power of CPUs and GPUs etc. People could get TuDoLinkGas Network Tokens by sharing their computing resources. The more people share their computers or smart phones the more powerful the TuDoLink will be. </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br class="gap-30" />
+            <div class="row">
+                <div class="col-lg-6 features text-center"> <img src="/images/yuzhou.gif" alt="" style="border-radius: 50px;width: 100%;height: 235px;" /> </div>
+                <div class="col-lg-6 features">
+                    <div class="media">
+                        <div class="media-body" style=" padding:20px 15px;    line-height: 26px;">
+                            <h1>Z8_GND_5296 galaxy</h1>
+                            <h3>A decentralized distributed network computing system</h3>
+                            <div>
+                                In the future,  we will build one of the largest global decentralized distributed network computing system. It has massive data storage and computing capacity, and be compatible with AI. TuDoLink can be used in social networks, big data, recommendation systems, fraud analysis, web security, knowledge maps, artificial intelligence and internet of things (IoT) and so on.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+-->
+
+<style type="text/css">
+    .n-table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        font-size: 14px;
+    }
+
+        .n-table dt {
+            float: left;
+            display: block;
+            font-weight: 100;
+        }
+
+            .n-table dt img {
+                padding: 4px;
+                border-radius: 5px;
+            }
+
+    .n-tabledl {
+        float: left;
+    }
+
+    .n-table-box {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<!-- Application 
+<div id="jump3" class="jumper"></div>
+<div class="section type-3 stats" style="background: url(/images/bc2.png) no-repeat 45px;">
+    <div class="container">
+        <div class="section-headlines">
+            <h4>Application</h4>
+
+            <div style="margin-bottom: 20px; padding: 0 15px;">
+                In the real world, all things are in different kinds of connections, such as human relations, computer networks, geographic data and molecular structure model. These connections forms a kind of interlinked data, the link is an essence of the data. TuDoLink could establish such link in many applications:
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/1.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>SNS</h2>
+                        <p>
+                            Designed to deal with network node data, showing excellent performance in graph computing.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/2.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>Big Data</h2>
+                        <p>
+                            TuDoLink has massive data processing capability, and through the main chain, the mass data can be distributed processed based on the principal and subordinate mechanism.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/3.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>Recommendation System</h2>
+                        <p>
+                            The graph database can be very convenient to record user's behavior module and analyze the user's preferences.
+                            Through the graphical classification, find the same type of people, analyze the historical records, and make corresponding recommendations to them.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/4.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>Fraud Analysis</h2>
+                        <p>
+                            In dealing with fraudulent analysis, machine learning and artificial intelligence have an absolute advantage.<br>
+                            Graphic database technology is the most powerful way to recognize and utilize large-scale data connections.
+
+
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/5.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>WEB Safety</h2>
+                        <p>
+                            TuDoLink can detect and prevent attacks and suspicious behaviors by detecting abnormal behaviors.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/6.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>Knowledge Map</h2>
+                        <p>
+                            Knowledge map shows the complex knowledge field through data mining, information processing, knowledge measurement and graphics rendering, reveal the dynamic development rule in knowledge field, and provide a valuable reference for discipline research.<br>
+                            With TuDoLink, users can easily create a knowledge map.
+
+
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-12 n-table-box">
+                <dl class="n-table">
+                    <dt class="col-xs-4 col-sm-2 col-md-1 "><img src="/images/7.png"></dt>
+                    <dd class="col-xs-8 col-sm-10 col-md-11">
+                        <h2>AI</h2>
+                        <p>
+                            TuDoLink opens the DAI interface to support distributed artificial intelligence.
+                            Establish the alliance mechanism through the task platform
+                            Obtain the alliance value by producing the alliance.
+                            Conduct asynchronous computation through sending limited tasks.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<!-- Time Line  -->
+<div id="jump4" class="jumper"></div>
+<div class="section type-2">
+    <div class="container">
+
+        <div class="section-headlines">
+            <h2>How does TuDoLink work?</h2>
+        </div>
+        <div class="center-block">
+            <img alt="" src="images/howdoesitwork.png" class="img-responsive center-block" style="display: block; margin: 0 auto;">
+        </div>
+
+        <div class="section-headlines">
+            <h2 style="color: #fff;">How does TuDoLink work?</h2>
+        </div>
+        <div class="section-headlines">
+            <h4>Timeline</h4>
+            <h2 style="color: #fff;"></h2>
+            <div></div>
+        </div>
+        <div class="center-block" >
+            <img alt="" src="images/Roadmap.png" class="img-responsive center-block" style="display: block; margin: 0 auto;">
+        </div>
+
+        
+        <!--<img src="images/Roadmap.png" style="display: block; margin: 0 auto;">-->
+        </div>
+</div>
+
+<!-- Team -->
+<div id="jump5" class="jumper"></div>
+<div class="section type-3">
+    <div class="container">
+        <div class="section-headlines">
+            <h4>Our Team</h4>
+            <h2></h2>
+            <div></div>
+        </div>
+
+        <div class="row">
+	   <div class="col-md-3">
+                <div class="team_item">
+                  <div class="img_block"><img alt="" src="images/team/LAURA.png"></div>
+                  <div class="team_body">
+                    <h5>Laura Fernández Robles <a href="https://www.linkedin.com/in/laura-fern%C3%A1ndez-robles-10755257/"></a></h5>
+                    <h6>Assistant Professor of University of Leon</h6>
+                    <h6>Ph.D. of University of Leon </h6>
+		    <h6>Ph.D. of University of Groningen </h6>
+                    <p>Computer scientist in machine learning, mathematics, artificial intelligence and pattern recognition.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team_item">
+                  <div class="img_block"><img alt="" src="images/team/20.png"></div>
+                  <div class="team_body">
+                    <h5>Nicola Strisciuglio <a href="https://www.linkedin.com/in/nicolastrisciuglio/"></a></h5>
+                    <h6>Postdoctoral researcher of University of Groningen</h6>
+                    <h6>Ph.D. of University of Salerno </h6>
+                    <p>Computer scientist in distributed system, artificial intelligence, pattern recognition, big data and internet of things. VIPIMAGE's 2015 best paper award.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team_item">
+                  <div class="img_block"><img alt="" src="images/team/3.png"></div>
+                  <div class="team_body">
+                    <h5>Jiapan GUO<a href="http://www.jiapan.nl"></a></h5>
+                    <h6>Postdoctoral researcher of University Medical Center Groningen</h6>
+                    <h6>Ph.D. of University of Groningen </h6>
+                    <p>Computer scientist in distributed system, depth learning, big data, graphic data field and medical image processing</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team_item">
+                  <div class="img_block"><img alt="" src="images/team/2.png"></div>
+                  <div class="team_body">
+                    <h5>UGO MOSCHINI<a href="https://www.linkedin.com/in/ugomoschini/"></a></h5>
+                    <h6>Ph.D. of University of Groningen </h6>
+                    <p>Computer scientist in distributed system, parallel computing, big data, intelligent system, robotics, neuroscience, pattern analysis and remote sensing image processing</p>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/17.png"></div>
+                    <div class="team_body">
+                        <h5>Estefanía Talavera Martínez<a href="https://www.linkedin.com/in/estefanía-talavera-martínez-995b5873/"></a></h5>
+                        <h6>Ph.D. of University of Groningen </h6>
+                        <h6>Ph.D. of University of Barcelona</h6>
+                        <p>Computer scientist in distributed system,lifelogging, deep learning, artificial intelligence, pattern recognition and big data </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/4.png"></div>
+                    <div class="team_body">
+                        <h5>CHENYU SHI<a href="https://www.linkedin.com/in/astoneshi/"></a></h5>
+                        <h6>Ph.D. of University of Groningen </h6>
+                        <p>Computer scientist in distributed system, graph database, blockchain, machine learning, depth learning, pattern recognition</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/5.png"></div>
+                    <div class="team_body">
+                        <h5>YIN CHOW<a href="#"></a></h5>
+                        <h6>Senior block chain R & D expert</h6>
+                        <p>Microsoft MVP Development Engineer once served as a number of Internet, listed company executives</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/6.png"></div>
+                    <div class="team_body">
+                        <h5>JING SHAO<a href="#"></a></h5>
+                        <h6>Promoter of CICPA mutual gold circle at Southeast University</h6>
+                        <p>Once in charge of Huarun, first brigade and other financial leaders, mainly engaged in block chain investment, venture capital and equity investment</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/WILL.png"></div>
+                    <div class="team_body">
+                        <h5>Will O'Brien<a href="https://www.linkedin.com/in/will-o-brien-73b7a0b5/"></a></h5>
+                        <h6>Initial Coin Offering Marketing Advisor;Entrepreneur, Freelance ICO and Blockchain consultant, Community Leader and Cryptocurrency market analyst;</h6>
+                        <p>Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/HarshitTalavia.png"></div>
+                    <div class="team_body">
+                        <h5>Harshit Talavia<a href="https://www.linkedin.com/in/talaviaharshit/"></a></h5>
+                        <h6>Initial Coin Offering Marketing Advisor</h6>
+                        <p>India Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/TimBuhr.png"></div>
+                    <div class="team_body">
+                        <h5>Tim Michael Buhr<a href="https://www.linkedin.com/in/tim-buhr-6b1832103/"></a></h5>
+                        <h6>Initial Coin Offering Marketing Advisor</h6>
+                        <p>Germany Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/EddieDamsma.png"></div>
+                    <div class="team_body">
+                        <h5>Eddie Damsma<a href=""></a></h5>
+                        <h6>Initial Coin Offering Marketing Advisor</h6>
+                        <p>France Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="team_item">
+                    <div class="img_block"><img alt="" src="images/team/Destiny Aigbe.png"></div>
+                    <div class="team_body">
+                        <h5>Destiny Aigbe<a href="https://www.aigbelaw.com/"></a></h5>
+                        <h6>U.S. securities lawyer; practice on public offerings/going public transactions, reverse mergers, initial coin offerings (ICOs), private placements, mergers & acquisitions, public company filings, PIPEs, secondary offerings and other corporate finance work in the middle market/microcap space.</h6>
+                        <p>r</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+            <div class="section-headlines">
+                <h2 style="font-family: '微软雅黑';">Consultant Team</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team_item">
+                        <div class="img_block"><img alt="" src="images/team/11.png"></div>
+                        <div class="team_body">
+                            <h5>NICOLAI PETKOV<a href="http://www.cs.rug.nl/~petkov/"></a></h5>
+                            <h6>
+                                Professor of computer science at the University of Groningen<br>
+                                Head of the system of Intelligent Systems<br>
+                                Member of the University Council
+                            </h6>
+                            <p>Author of two monographs and coauthor of another book on parallel computing, holds four patents and has authored over 100 scientific papers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team_item">
+                        <div class="img_block"><img alt="" src="images/team/13.png"></div>
+                        <div class="team_body">
+                            <h5>GEORGE AZZOPARDI<a href="http://www.cs.rug.nl/~george/%20Zhi%20zhang"></a></h5>
+                            <h6>Assistant Professor of University of Groningen</h6>
+                            <h6>Senior AI Specialist at Crowdynews</h6>
+                            <h6>Affiliated with the University of Malta</h6>
+                            <p>Award of the Tenure Track project. The founder of the COSFIRE algorithm in the field of pattern recognition and machine vision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team_item">
+                        <div class="img_block"><img alt="" src="images/team/14.png"></div>
+                        <div class="team_body">
+                            <h5>ZHI ZHANG<a href="#"></a></h5>
+                            <h6>Founder of cloud poly (Beijing) Technology Co., Ltd.</h6>
+                            <p>The inventor of the core technology of the WPS curve of Chinese characters. He has long been a senior software designer in Microsoft and a technical director of the "Venus program". And lead the development of China Mobile 139 mobile phone mailbox and other star commercial products. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="team_item">
+                        <div class="img_block"><img alt="" src="images/team/1.png"></div>
+                        <div class="team_body">
+                            <h5>Manuel Antonio López Antequera<a href="https://www.linkedin.com/in/mlopezantequera/"></a></h5>
+                            <h6>Ph.D. of University of Groningen</h6>
+                            <h6>Ph.D. of University of Málaga</h6>
+                            <p>Computer scientist in deep learning, robotics, distributed system, parallel computing, big data and pattern recognition</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="team_item">
+                        <div class="img_block"><img alt="" src="images/team/15.png"></div>
+                        <div class="team_body">
+                            <h5>XIYUAN HU<a href="#"></a></h5>
+                            <h6>Ph.D. of the Institute of automation, Chinese Academy of Sciences</h6>
+                            <p>Harvard University medical school, visiting scholar research field signal adaptive decomposition theory, video and image processing, physiological signal analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--end:.row-->
+        </div>
+    <!--end:.container-->
+</div>
+
+<div id="jump6" class="jumper"></div>
+<section class="section type-4 email-susbscription">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <img width="200" height="180" src="/images/email.png" alt="email">
+            </div>
+
+            <div class="col-lg-9">
+                <h1>Subscribe to our newsletter and never miss any updates.</h1>
+                <p></p>
+                <form method="" action="">
+                    <p>
+                        <input type="email" name="EMAIL" placeholder="Please enter your email address.">
+                        <input type="submit" value="Subscription!" class="btn btn-primary">
+                    </p>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<div id="jump7" class="jumper"></div>
+<div class="section type-1 section-contact">
+    <div class="container">
+        <div class="section-headlines">
+            <h4>
+                Contact us
+            </h4>
+            <div style="padding-bottom: 20px;">
+                We always like to hear from our community.
+
+                contact us: info at tudolink.io
+            </div>
+        </div>
+
+        <div class="row">
+            <!--
+            <div class="col-lg-8 col-lg-offset-2">
+                <form role="form" action="" method="post" role="form" id="contac_form" name="contact_form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="your name">
+                                <br class="gap-15" />
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="your email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+                    </div>
+                    <button id="button-send" class="btn btn-block btn-success">Submit</button>
+                </form>
+
+            </div>
+            -->
+        </div>
+
+    </div>
+</div>
+
+@section footer{
+    <style type="text/css">
+        .bottom-box {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+            .bottom-box ul {
+                display: inline-block;
+            }
+
+                .bottom-box ul li {
+                    float: left;
+                    margin-left: 20px;
+                    list-style: none;
+                }
+
+                    .bottom-box ul li a div {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+        .link1 {
+            background: url(/images/link.png) 0 0 no-repeat;
+        }
+
+        .link2 {
+            background: url(/images/link.png) -50px 0 no-repeat;
+        }
+
+        .link3 {
+            background: url(/images/link.png) -100px 0 no-repeat;
+        }
+
+        .link4 {
+            background: url(/images/link.png) -150px 0 no-repeat;
+        }
+
+        .link5 {
+            background: url(/images/link.png) -200px 0 no-repeat;
+        }
+
+        .link6 {
+            background: url(/images/link.png) -250px 0 no-repeat;
+        }
+
+        .link7 {
+            background: url(/images/link.png) -300px 0 no-repeat;
+        }
+
+        .link8 {
+            background: url(/images/link.png) -350px 0 no-repeat;
+        }
+    </style>
+  <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 bottom-box">
+                        <ul>
+                            <li><a href="https://github.com/TuDoLink/" target="_blank"><div class="link1" style="background: url(/images/icons/1.png);height: 50px;"></div></a></li>
+                            <li><a href="https://t.me/tudolink/" target="_blank"><div class="link1" style="background: url(/images/icons/3.png);height: 50px;"></div></a></li>
+                            <li><a href="@("https://medium.com/@tudolink/")" target="_blank"><div class="link2" style="background: url(/images/icons/2.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.reddit.com/user/tudolinkproject/" target="_blank"><div class="link3" style="background: url(/images/icons/4.png);height: 50px;"></div></a></li>
+                            <li><a href="https://twitter.com/TuDoLinkProject/" target="_blank"><div class="link4" style="background: url(/images/icons/5.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.facebook.com/tudolinkproject/" target="_blank"><div class="link5" style="background: url(/images/icons/6.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.linkedin.com/company/tudolink/" target="_blank"><div class="link6" style="background: url(/images/icons/7.png);height: 50px;"></div></a></li>
+                            <li><a href="#"><div class="link7" style="background: url(/images/icons/8.png);height: 50px;"></div></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=uCKhzZe76_E/" target="_blank"><div class="link8" style="background: url(/images/icons/9.png);height: 50px;"></div></a></li>
+                        </ul>
+                        <p>TuDoLink.io     All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+}
+
+@section PageSpecificJavascriptIncludes{
+    <script type="text/javascript">
+$(function(){
+    $().timelinr({
+		autoPlay: 'true',
+		autoPlayDirection: 'forward',
+		startAt: 4
+	})
+});
+    </script>
+    <script>
+  $('.nav-tabs a').click(function (e) {
+   e.preventDefault();
+   $(this).tab('show');
+ })
+
+   $(document).ready(function(){
+            $('#home-main-nav-lang').click(function(){
+              if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).find('dl').hide();
+              }
+              else
+              {
+                $(this).addClass('active');
+                $(this).find('.lang-box').height(65);
+                $(this).find('dl').show();
+              }
+            });
+
+$('#home-main-nav-lang a').click(function(){
+var url=$(this).attr('href');
+location.href=url;
+});
+
+});
+    </script>
+
+    <script>
+window.onscroll = function () {
+var topbox = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+var navbox = document.getElementById('navbar');
+if (topbox >800) {
+    navbox.style.background = '#2a333b';
+} else {
+    navbox.style.background = 'rgba(0,0,0,0.3)';
+}
+}
+  function Star(id, x, y){
+   this.id = id;
+   this.x = x;
+   this.y = y;
+   this.r = Math.floor(Math.random()*2)+1;
+   var alpha = (Math.floor(Math.random()*10)+1)/10/2;
+   this.color = "rgba(255,255,255,"+alpha+")";
+ }
+
+ Star.prototype.draw = function() {
+   ctx.fillStyle = this.color;
+   ctx.shadowBlur = this.r * 2;
+   ctx.beginPath();
+   ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+   ctx.closePath();
+   ctx.fill();
+ }
+
+ Star.prototype.move = function() {
+   this.y -= .15;
+   if (this.y <= -10) this.y = HEIGHT + 10;
+   this.draw();
+ }
+
+ Star.prototype.die = function() {
+  stars[this.id] = null;
+  delete stars[this.id];
+}
+
+
+function Dot(id, x, y, r) {
+	this.id = id;
+	this.x = x;
+	this.y = y;
+	this.r = Math.floor(Math.random()*5)+1;
+	this.maxLinks = 2;
+	this.speed = .5;
+	this.a = .5;
+	this.aReduction = .005;
+	this.color = "rgba(255,255,255,"+this.a+")";
+	this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+
+	this.dir = Math.floor(Math.random()*140)+200;
+}
+
+Dot.prototype.draw = function() {
+	ctx.fillStyle = this.color;
+	ctx.shadowBlur = this.r * 2;
+	ctx.beginPath();
+	ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+	ctx.closePath();
+	ctx.fill();
+}
+
+Dot.prototype.link = function() {
+	if (this.id == 0) return;
+	var previousDot1 = getPreviousDot(this.id, 1);
+	var previousDot2 = getPreviousDot(this.id, 2);
+	var previousDot3 = getPreviousDot(this.id, 3);
+	if (!previousDot1) return;
+	ctx.strokeStyle = this.linkColor;
+	ctx.moveTo(previousDot1.x, previousDot1.y);
+	ctx.beginPath();
+	ctx.lineTo(this.x, this.y);
+	if (previousDot2 != false) ctx.lineTo(previousDot2.x, previousDot2.y);
+	if (previousDot3 != false) ctx.lineTo(previousDot3.x, previousDot3.y);
+	ctx.stroke();
+	ctx.closePath();
+}
+
+function getPreviousDot(id, stepback) {
+	if (id == 0 || id - stepback < 0) return false;
+	if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+	else return false;//getPreviousDot(id - stepback);
+}
+
+Dot.prototype.move = function() {
+	this.a -= this.aReduction;
+	if (this.a <= 0) {
+		this.die();
+		return
+	}
+	this.color = "rgba(255,255,255,"+this.a+")";
+	this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+	this.x = this.x + Math.cos(degToRad(this.dir))*this.speed,
+	this.y = this.y + Math.sin(degToRad(this.dir))*this.speed;
+
+	this.draw();
+	this.link();
+}
+
+Dot.prototype.die = function() {
+  dots[this.id] = null;
+  delete dots[this.id];
+}
+
+
+var canvas  = document.getElementById('canvas'),
+ctx = canvas.getContext('2d'),
+WIDTH,
+HEIGHT,
+mouseMoving = false,
+mouseMoveChecker,
+mouseX,
+mouseY,
+stars = [],
+initStarsPopulation = 80,
+dots = [],
+dotsMinDist = 2,
+maxDistFromCursor = 50;
+
+setCanvasSize();
+init();
+
+function setCanvasSize() {
+	WIDTH = document.documentElement.clientWidth,
+  HEIGHT = document.documentElement.clientHeight;
+
+  canvas.setAttribute("width", WIDTH);
+  canvas.setAttribute("height", HEIGHT);
+}
+
+function init() {
+	ctx.strokeStyle = "white";
+	ctx.shadowColor = "white";
+	for (var i = 0; i < initStarsPopulation; i++) {
+		stars[i] = new Star(i, Math.floor(Math.random()*WIDTH), Math.floor(Math.random()*HEIGHT));
+		//stars[i].draw();
+	}
+	ctx.shadowBlur = 0;
+	animate();
+}
+
+function animate() {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+  for (var i in stars) {
+   stars[i].move();
+ }
+ for (var i in dots) {
+   dots[i].move();
+ }
+ drawIfMouseMoving();
+ requestAnimationFrame(animate);
+}
+
+window.onmousemove = function(e){
+	mouseMoving = true;
+	mouseX = e.clientX;
+	mouseY = e.clientY;
+	clearInterval(mouseMoveChecker);
+	mouseMoveChecker = setTimeout(function() {
+		mouseMoving = false;
+	}, 100);
+}
+
+
+function drawIfMouseMoving(){
+	if (!mouseMoving) return;
+
+	if (dots.length == 0) {
+		dots[0] = new Dot(0, mouseX, mouseY);
+		dots[0].draw();
+		return;
+	}
+
+	var previousDot = getPreviousDot(dots.length, 1);
+	var prevX = previousDot.x;
+	var prevY = previousDot.y;
+
+	var diffX = Math.abs(prevX - mouseX);
+	var diffY = Math.abs(prevY - mouseY);
+
+	if (diffX < dotsMinDist || diffY < dotsMinDist) return;
+
+	var xVariation = Math.random() > .5 ? -1 : 1;
+	xVariation = xVariation*Math.floor(Math.random()*maxDistFromCursor)+1;
+	var yVariation = Math.random() > .5 ? -1 : 1;
+	yVariation = yVariation*Math.floor(Math.random()*maxDistFromCursor)+1;
+	dots[dots.length] = new Dot(dots.length, mouseX+xVariation, mouseY+yVariation);
+	dots[dots.length-1].draw();
+	dots[dots.length-1].link();
+}
+//setInterval(drawIfMouseMoving, 17);
+
+function degToRad(deg) {
+	return deg * (Math.PI / 180);
+}
+    </script>
+
+}

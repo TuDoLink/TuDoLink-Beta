@@ -1,0 +1,1667 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://TuDoLink.io/tudolink.io/white/white.html#menu -->
+<html lang="en-us" class="hb-loaded">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <title>TuDoLink | Blockchain+Shared Economy+Computer Intelligence</title>
+    <link href="css/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min-67e841fe4137c6cd02e58486130cbba5.css">
+    <meta name="apple-mobile-web-app-title" content="TuDoLink">
+    <meta name="application-name" content="TuDoLink">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:site_name" content="TuDoLink">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TuDoLink | Blockchain+Shared Economy+Computer Intelligence">
+    <meta property="og:description" content="TuDoLink is a sharing & trading platform of idle computing resources based on blockchain technology. People could lease or rent idle or unused computing resources of smart phones, tablets and computers on TuDoLink.">
+    <meta property="article:publisher" content="https://www.facebook.com/TuDoLink.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TuDoLink | Blockchain+Shared Economy+Computer Intelligence">
+    <meta name="twitter:description" content="TuDoLink is a sharing & trading platform of idle computing resources based on blockchain technology. People could lease or rent idle or unused computing resources of smart phones, tablets and computers on TuDoLink.<meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <style type="text/css">
+        #bio_ep_bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.3;
+            z-index: 10001;
+        }
+
+        #bio_ep {
+            display: none;
+            position: fixed;
+            width: 600px;
+            height: 700px;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            background-color: #fff;
+            box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.5);
+            z-index: 10002;
+        }
+    </style>
+    <script src="js/1144255412377537" async=""></script>
+    <script async="" src="js/fbevents.js"></script>
+    <script type="text/javascript" async="" src="js/analytics.js"></script>
+    <script async="" src="js/chatra.js"></script>
+    <style>
+#chatra {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  max-height: 95%;
+  max-width: 90%;
+  max-width: calc(100% - 40px);
+  transition: 0.2s linear;
+  transition-property: visibility, opacity;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  display: block;
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0
+}
+#chatra.chatra--animating {
+  transition: 350ms cubic-bezier(.04, .74, .4, .98);
+  transition-property: height, width, max-width, max-height, top, bottom, left, right, margin-bottom, visibility, opacity, transform, -webkit-transform, -moz-transform;
+}
+#chatra.chatra--animating.chatra--mobile-widget {
+  transition: none;
+}
+#chatra.chatra--animating.chatra--style-round {
+  transition: none;
+}
+#chatra.chatra--side-bottom {
+  bottom: 0;
+}
+#chatra.chatra--side-bottom.chatra--style-round:not(.chatra--expanded) {
+  bottom: 15px;
+}
+#chatra.chatra--side-left {
+  left: 0;
+}
+#chatra.chatra--side-left.chatra--style-round:not(.chatra--expanded) {
+  left: 15px;
+}
+#chatra.chatra--side-right {
+  right: 0;
+}
+#chatra.chatra--side-right.chatra--style-round:not(.chatra--expanded) {
+  right: 15px;
+}
+#chatra.chatra--side-left.chatra--expanded {
+  bottom: 0;
+  left: 20px;
+}
+#chatra.chatra--side-right.chatra--expanded {
+  bottom: 0;
+  right: 20px;
+}
+#chatra.chatra--pos-right {
+  right: 20px;
+}
+#chatra.chatra--pos-right.chatra--style-round:not(.chatra--expanded) {
+  right: 15px;
+}
+#chatra.chatra--pos-left {
+  left: 20px;
+}
+#chatra.chatra--pos-left.chatra--style-round:not(.chatra--expanded) {
+  left: 15px;
+}
+#chatra.chatra--pos-center {
+  left: 50%;
+}
+#chatra.chatra--pos-top.chatra--style-tab:not(.chatra--expanded) {
+  bottom: 100%;
+  margin-bottom: -40px;
+  max-height: 90%;
+  max-height: calc(100% - 80px);
+}
+#chatra.chatra--pos-top.chatra--style-round:not(.chatra--expanded) {
+  top: 15px;
+}
+#chatra.chatra--pos-bottom:not(.chatra--expanded) {
+  bottom: 40px;
+  max-height: 90%;
+  max-height: calc(100% - 80px);
+}
+#chatra.chatra--pos-bottom.chatra--style-round:not(.chatra--expanded) {
+  bottom: 15px;
+}
+#chatra.chatra--pos-middle:not(.chatra--expanded) {
+  bottom: 50%;
+  max-height: 90%;
+  max-height: calc(100% - 80px);
+}
+#chatra.chatra--visible {
+  visibility: visible;
+  opacity: 1;
+}
+#chatra.chatra--mobile-widget.chatra--pos-right {
+  right: 15px;
+}
+#chatra.chatra--mobile-widget.chatra--pos-left {
+  left: 15px;
+}
+#chatra.chatra--mobile-widget.chatra--expanded {
+  max-width: none;
+  max-height: none;
+}
+#chatra.chatra--mobile-widget.chatra--expanded.chatra--pos-right {
+  right: 0;
+}
+#chatra.chatra--mobile-widget.chatra--expanded.chatra--pos-left {
+  left: 0;
+}
+#chatra.chatra--mobile-widget.chatra--expanded.chatra--pos-center {
+  left: 0;
+}
+#chatra.chatra--mobile-widget.chatra--expanded.chatra--side-right {
+  right: 0;
+}
+#chatra.chatra--mobile-widget.chatra--expanded.chatra--side-left {
+  left: 0;
+}
+html.chatra-mobile-widget-expanded, body.chatra-mobile-widget-expanded {
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed !important;
+  margin: 0 !important;
+}
+#chatra__iframe {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background: transparent !important;
+}
+#chatra.chatra--correct-odd-width {
+  padding-left: 1px;
+}
+#chatra.chatra--correct-odd-width #chatra__iframe {
+  left: 1px !important;
+  width: calc(100% - 1px) !important;
+}
+#chatra.chatra--correct-odd-height {
+  padding-top: 1px;
+}
+#chatra.chatra--correct-odd-height #chatra__iframe {
+  top: 1px !important;
+  height: calc(100% - 1px) !important;
+}
+
+@@media print {
+#chatra {
+  display: none;
+}
+}
+    </style>
+    <script async="true" type="text/javascript" src="js/6NFKTHA5PJFLPJ2HXS32CK"></script>
+    <div style="width: 1px; height: 1px; display: inline; position: absolute;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="../images/out">
+        <img height="1" width="1" style="border-style:none;" alt="" src="../images/out(1)">
+        <img height="1" width="1" style="border-style:none;" alt="" src="../images/out(2)">
+        <img height="1" width="1" style="border-style:none;" alt="" src="../images/out(3)">
+        <img height="1" width="1" style="border-style:none;" alt="" src="../images/out(4)">
+        <img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/g/out?google_nid=adroll5">
+    </div>
+</head>
+<body huaban_collector_injected="true">
+    <header class="header" style="height: 62px;">
+        <div class="container" style="line-height: 62px;">
+            <div class="row middle-xs">
+                <div class="col-md-2 col-sm-12 col-xs-6 start-md center-xs">
+                    <div class="header__logo">
+                        <div class="top-line-anchor">
+                            <div class="sticky-element" id="sticky">
+                                <div class="sticky-anchor"></div>
+                                <div class="sticky-content">
+                                    <div class="menu-open"><a id="btn" href="#"><span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/"><img src="../images/logo-head.png" alt="logo" style="position: relative;top: 12px; width: 200px;"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="flex around-xs" id="link">
+                        <li><a href="#s1-introduction">What is TuDoLink</a></li>
+                        <li><a href="#s7-sale">Tokens</a></li>
+                        <li><a href="#s9-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="slideout-menu slideout-menu-right slideout-menu-left" id="menu">
+        <div class="menu-close"><span></span></div>
+        <div class="row">
+            <div class="col-xs-12" id="link-1">
+                <ul>
+                    <li><a class="font-roboto-light-18-px" href="#whitepaper">TuDoLink White Paper</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#toc">Table of Contents</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s1-introduction">1.What is TuDoLink?</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s2-issues">2.The Issues Addressed</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s3-advantages">3. Advantages</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s4-business-model">4. Technology Roadmap</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s5-technology">5. Applications Value</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s6-team">6. Roadmap and Team</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s7-sale">7.Tokens</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s8-regulation">8. Risk and Regulation</a></li>
+                    <li><a class="font-roboto-light-18-px" href="#s9-contact">9. Contact Us</a></li>
+                    <li></li>
+                </ul>
+
+                <div class="TuDoLink">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <img src="../images/logo.png" alt="" width="200px;" style="margin-top: 15px;">
+                            <p style="color: #cdcdcd">Become an investor and take part in the project of TuDoLink.</p>
+                        </div>
+                        <div class="col-xs-7"><img src="../images/client.png" alt="" height="400px;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="slideout-panel slideout-panel-right slideout-panel-left" id="panel">
+        <div id="whitepaper">
+            <section class="white">
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-md-12">
+                            <h2>TuDoLink White Paper</h2>
+                            <p>2nd April,2018 | Bete Ver 1.2</p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <figure>
+                                <blockquote>
+                                    <h4>Dear Investors,</h4>
+                                    <p>Not only rooms or cars could be shared, smart phones/computers could also be shared! </p>
+                                    <p>TuDoLink is one of state-of-the-art products in blockchain, shared economy and computer intelligence era. It a cutting-edge trading platform that provides an online marketplace for people to lease or rent computing resources. People could share/lease their idle or unused computing resources of their smart phones, tablets and computers on TuDoLink, such as computing power of CPUs and GPUs, hard drive spaces and memories etc. They could get not only rental but also bonus of cryptocurrency of TuDoLink platform. People could rent these shared computing resources to build one or more distributed network computing and storage system(s) for their project. Such a system can be used for massive/big data computing, parallel clouds computing and machine learning and so on.</p>
+                                    <p>Like most of blockchain projects, not only the released version of the TuDoLink project will be open source, but also all programs in the platform is open source. TuDoLink uses machine learning algorithm to build safety mechanisms and to analyze codes of programs. Only safe or high safe level programs could be submitted to the platform. TuDoLink requires each member to complete a profile and submit their digital identity so that members can learn about each other. Every deal, program and data have digital signatures of the programmer and member(s) and all these information are stored in the blockchian. Morever, TuDoLink offers insurance, called its "program guarantee", which covers property damage caused by the program in the TuDoLink. </p>
+                                    <p>TuDoLink makes money from its service fee. For example, we could charge 3-12% fee for every deal that is completed. This service fee is what actually goes to the project's operation, enables the platform that we provide, and allows us to offer great customer support before, during and after deal. We will decide how we charge service fee after the project evaluation by professional evaluators.</p>
+                                    <p>TuDoLink likes a magical little "quadratic space" that resides on your phone or computer screen, but it opens a door to the place, where computers all over the world linked together for a fun and engaging experience with "super computer brain".</p>
+                                    <p>We pledge to review any community's feedback and keep the records open for anyone to audit building trust and openness standards like never before.</p>
+                                    <p>Dive in, read about us, talk to us, create with us and enjoy!</p>
+                                </blockquote>
+                                <div class="center-block">
+                                    <figcaption><img src="../images/ito.jpg" alt="ito" class="img-responsive center-block" ></figcaption>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dark">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2>Abstract</h2>
+                            <span>Abstract</span>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-6">
+                            <p>
+                                TuDoLink is a sharing and trading platform of idle computing resources based on blockchain technology. It organizes people to lease or rent their idle computing resources of smart phones, tablets and computers. People who share/lease their idle computing resources of their smart phones, tablets and computers could get not only rental but also bonus of cryptocurrency of TuDoLink platform. TuDoLink will use these shared computing resources to build a global distributed network computing system. Such a distributed network computing system can be used in social networks, big data, recommendation systems, fraud analysis, web security, knowledge maps, artificial intelligence and internet of things and so on. Programmers and researchers could rent these shared computing resources to build one or more distributed network computing systems for their project. 
+                            </p>
+                        </div>
+                        <div class="col-md-6"><img src="../images/client.png"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="white" id="toc">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2>Table of Contents</h2>
+                            <span>Table of Contents</span>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-6">
+                            <ol class="numbered">
+                                <li>
+                                    <a href="#s1-introduction">What is TuDoLink?</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s1-1">A Sharing and Trading Platform</a></li>
+                                        <li><a href="#s1-2">A Super Networking Computer</a></li>
+                                        <li><a href="#s1-3">A Blockchain Project</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s2-issues">The Issues Addressed</a>
+                                    <ul class="bulleted nested">
+                                        <!--<li><a href="#s2-1">Reform in Storage Structure: from independent chain to graphical structure</a></li>-->
+                                        <li><a href="#s2-2">Breakthrough in Sharing Security: from security risks to secure trading of computing resources</a></li>
+
+                                        <li><a href="#s2-3">Breakthrough of Computing Methodology: from finite individual to infinite sharing clusters</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s3-advantages">Advantages</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s3-1">Provide A Blockchain Based Solution</a></li>
+                                        <li><a href="#s3-2">The Initiation of TuDoLink: academic，Neo4j, BOINC</a></li>
+                                        <li><a href="#s3-3">Advantages: integrating blockchain technology and sharing computing resources</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s4-business-model">Technology Roadmap</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s4-1">TuDoLink Design Principles and Framework</a></li>
+                                        <li><a href="#s4-2">TuDoLink Model Design and Structure</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s5-technology">Applications Value</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s5-1">Applications</a></li>
+                                        <li><a href="#s5-2">Potential Customers and Partners</a></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6">
+                            <ol id="wp-toc-continue">
+
+                                <li>
+                                    <a href="#s6-team">Roadmap and Team</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s6-1">Project Roadmap</a></li>
+                                        <li><a href="#s6-2">Project Team</a></li>
+                                        <li><a href="#s6-3">Technical Consultant</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s7-sale">Tokens</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s7-1">TUDO (TuDoLink Token）</a></li>
+                                        <li><a href="#s7-2">TGAS (TuDoLinkGas Network Token）</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#s8-regulation">Risk and Regulation</a>
+                                    <ul class="bulleted nested">
+                                        <li><a href="#s8-1">Risk of Token</a></li>
+                                        <li><a href="#s8-2">Risk of Project</a></li>
+                                        <li><a href="#s8-3">Regulation</a></li>
+                                    </ul>
+
+                                </li>
+                                <li><a href="#s9-contact">Contact Us</a></li>
+                            </ol>
+                            <img src="../images/about.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="numbered white" id="s1-introduction">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2>1、What is TuDoLink?</h2>
+                            <span> What is TuDoLink?</span>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="center-block">
+                            <img src="../images/whatistudolink.png" class="img-responsive center-block" style="display: block; margin: 0 auto;">
+                        </div>
+                    </div>
+
+                        <div class="col-md-12">
+                            <p>TuDoLink is a sharing and trading platform of idle computing resources based on blockchain technology. It is one of state-of-the-art products in blockchain, shared economy and computer intelligence era. People could share and lease their idle computing resources of smart phones, tablets and computers on TuDoLink's website, software and APP. They would get not only rental but also bonus of cryptocurrency of TuDoLink platform. The cryptocurrency will be distributed by an algorithm of calculating contribution values based on a smart contract of blockchain. TuDoLink will use these shared computing resources to build a global distributed network computing system. Such a distributed network computing system can be used in social networks, big data, recommendation systems, fraud analysis, web security, knowledge maps, artificial intelligence and internet of things and so on. Programmers or researchers could rent these shared computing resources to build one or more distributed network computing systems for their project. </p>
+                        </div>
+                    
+                    
+                </div>
+            </section>
+            <section class="numbered white" id="s1-1">
+                <div class="container">
+                    <div class="row content">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>A Sharing and Trading Platform</h3>
+                            </div>
+                        </div>
+
+                        <div class="row content">
+                            <div class="col-md-6 text-center"><img src="../images/nodes net.jpg"></div>
+                            <div class="col-md-6">
+                                <p>Airbnb, an online marketplace, offers accommodations in private house. </p>
+                                <p>Uber, a transportation network company, offers rides in private cars. </p>
+                                <p>BlaBlaCar offers carpooling in private journeys. </p>
+                                <p>We, TuDoLink, offers computing resources in private smartphones and computers.</p>
+                            </div>
+                        </div>
+                        <div class="row content">
+
+                            <div class="col-md-12">
+                                <p>TuDoLink is a sharing and trading platform that provides an online marketplace for people to lease or rent computing resources. People could share/lease their idle or unused computing resources from their smart phones, tablets and computers on TuDoLink, such as computing power of CPUs and GPUs, hard drive spaces and memories etc. People could rent these shared computing resources and submit their programs in the system. </p>
+                              
+                            </div>
+
+                            <div class="center-block">
+                                <img src="../images/howdoesitwork.png" class="img-responsive center-block" style="display: block; margin: 0 auto;">
+
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <p>People who lease or rent computing resources could get not only rental but also bonus of cryptocurrency of TuDoLink platform. The cryptocurrency will be distributed by an algorithm of calculating contribution values based on a smart contract of blockchain. Members could also contribute their computing resources to cure diseases, study neural networks and do many other types of scientific research. Meanwhile, they could obtain honor certificates from corresponding research institutions.</p>
+                                <p>TuDoLink uses machine learning algorithm to build safety mechanisms and to analyze codes of programs. Only safe or high safe level programs could be submitted to the platform. TuDoLink requires each member to complete a profile and submit their digital identity so that members can learn about each other. Every deal, program and data has digital signatures of the programmer and member(s) and all these information are stored in the blockchian. Morever, TuDoLink offers insurance, called its "program guarantee", which covers property damage caused by the program in the TuDoLink.</p>
+                            </div>
+                        </div>
+
+                        <!--
+                        <div class="col-md-12">
+                            <div class="col-md-6 text-center"><img src="../images/daily-drawing.png"></div>
+                          <ol class="roman">
+                            <li>Simple understanding: Drop by drop the oceans are filled; stone by stone the walls are built, computer by computer the TuDoLink are created. The more people share their computers or smart phones the more powerful the TuDoLink is. Good tools are essential things. TuDoLink is a good tool which could build a super powerful network computer and could be the most powerful one.  </li>
+                            <li>Specialized understanding: TuDoLink Clouds Computing is a global decentralized distributed network computing system. Such a distributed network computing is built by idle computing resources of their computers and smart phones which are shared by everyone. A large task can be decomposed into thousands of small tasks, and assigned to thousands of nodes to complete tasks. A computer or a smartphone could become a node by sharing its computing resources, such as spaces of hard drive and memories and computing power of CPUs and GPUs etc. People could increase their “wealth”(tokens) by sharing or renting out their computing resources. Users could rent the distributed network computing system to run their programs and tasks. People could trust the system as it is based on the smart contract of blockchain and all the code are open. So, TuDoLink will make more and more people like to share their computers and smart phones. </li>
+                          </ol>
+                        </div>
+                          -->
+                    </div>
+                </div>
+            </section>
+            <section class="numbered white" id="s1-2">
+                <div class="container">
+                    <div class="row content">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>A Super Networking Computer</h3>
+                            </div>
+                        </div>
+
+                        <div class="row content">
+                            <div class="col-md-6">
+                                <p>Drop by drop the oceans are filled; stone by stone the walls are built, computer by computer the TuDoLink are created. The more people share their smart phones or computers, the more powerful the TuDoLink will be. Good tools are essential things. TuDoLink is a good tool which could build a super powerful networking computer and could be the most powerful one.</p>
+                                <p>A large task can be decomposed into thousands of small tasks, and assigned to thousands of nodes to complete tasks. A computer or a smartphone could become a node by sharing its computing resources, such as spaces of hard drive and memories and computing power of CPUs and GPUs etc. TuDoLink builds a global distributed networking computing system by using these idle computing resources from smart phones, tablets and computers. It is built by everyone and belongs to everyone.</p>
+                           </div>
+                            <div class="col-md-6 text-center"><img src="../images/nodes1.png"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <section class="numbered white" id="s1-3">
+                <div class="container">
+                    <div class="row content">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>A Blockchain Project</h3>
+                            </div>
+                        </div>
+
+                        <div class="row content">
+                            <div class="col-md-6 text-center"><img src="../images/blockchain-handshake.png"></div>
+                            <div class="col-md-6">
+                                <p>If the blockchain is the next generation of the Internet, and then the future of shared computing resources must be built on the blockchain. TuDoLink is a blockchain project. Blockchain and cryptocurrency technologies build trust and incentive for users of TuDoLink. We requires each member to complete a profile and submit their digital identity so that members can learn about each other. All information, such as deal, program, data, digital signatures of the programmer and member(s), are stored in the blockchian. We release a cryptocurrency which is used in the platform. Users could get the cryptocurrency by sharing or renting their resources. The cryptocurrency will be distributed by an algorithm of calculating contribution values based on a smart contract of blockchain. </p>
+
+                            </div>
+                        </div>
+
+                        <!--
+                        <div class="col-md-12">
+                            <p><p>TuDoLink will bring a wide range of applications which are based on shared computing resources and distributed network computing systems.</p></p>
+                            <ol class="roman">
+                                
+                                <li>Simple understanding: TuDoLink will create a super network computer that build by everyone and belongs to everyone.</li>
+                                <li>Specialized understanding: If the blockchain is the next generation of the Internet, and then the future of shared computing resources must be built on the blockchain. TuDoLink will become one of the best computing resources and graph database based on blockchain. It can be used in social networks, big data, recommendation systems, fraud analysis, web security, knowledge maps, artificial intelligence and internet of things (IoT) and so on. The global TuDoLink Database could be used for storing data of blockchain applications, massive data of the IoT and private enterprise data and so on.  </li>
+                                <li>ToDoLink will become a trading platform of idle computing resources. Buyers and Sellers could reach a consensus on the clusters by using coalition algorithm. ToDoLink will organize users to share their idle computers or smart phones and their corresponding benefits will be distributed by an algorithm of calculating contribution values based on the smart contract of blockchain. With the incentive of “ToDoLinkGas Network Token”, ToDoLink will become a vibrant platform.</li>
+                                <li>In the future, we will develop more plug-in interface, allowing researchers to widely and easily use. We will expand the ToDoLink platform to support the deep learning sub-plug-ins such as Theano and Sklearn, and make full use of distributed computing capabilities for deep learning and other artificial intelligence algorithm on the platform. </li>
+                            </ol>
+                        </div>
+                        -->
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="numbered white" id="s2-issues">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2> 2、The Issues Addressed</h2>
+                            <span> The Issues Addressed</span>
+                        </div>
+                       
+                    </div>
+                    <!--
+                    <h3 id="s2-1">Reform in Storage Structure: from independent chain to graphical structure</h3>
+                    <div class="row content">
+
+                        <div class="col-md-6">
+
+                            <p>The current application for blockchain is to provide a chain structure, but not a graphical structure.</p>
+                            <p>The current blockchain only stores structures of data, not graphical nodes.</p>
+                            <p>Current prevalent commercial database, such as Oracle, is expensive and complex.</p>
+                            <p>The performance of the current popular relational database such as MS SQLSERVER is insufficient in processing graph database.</p>
+                            <p>Currently, there are no simple, non-installed and easy-to-use databases on blockchain.</p>
+                        </div>
+                        <div class="col-md-6 text-center"><img src="../images/Graph.jpg"></div>
+                    </div>
+                    -->
+
+                </div>
+            </section>
+
+            <section class="numbered white" id="s2-2">
+                <div class="container">
+                    <div class="row sub heading">
+                        <div class="col-md-12">
+                            <h3>Breakthrough in Sharing Security: from security risks to secure trading of computing resources</h3>
+                        </div>
+                    </div>
+                    <div class="row content">
+
+                        <div class="col-md-6">
+                            <p>There is a problem of trust in current sharing computing resource. People have to trust each other at the begining so that the transaction can be assured. While the TuDoLink is based on the blockchain and all deal information are stored in the blockchain, which completely breaks the shackles that require mutual trust, and users can safely carry out the transaction of computing resources. </p>
+                            <p>Morever, TuDoLink offers insurance which covers property damage caused by the program in the TuDoLink. All programs in the platform are open source. TuDoLink could analyze these codes automatically so that only safe programs could be submitted to the platform. </p>
+                        </div>
+                        <div class="col-md-6 text-center"><img src="../images/Security.png"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="numbered white" id="s2-3">
+                <div class="container">
+                    <div class="row sub heading">
+                        <div class="col-md-12">
+                            <h3>Breakthrough of Computing Methodology: from finite individual to infinite sharing clusters</h3>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-6 text-center"><img src="../images/client2.png"></div>
+
+                        <div class="col-md-6">
+                            <p>The current distributed computing system is mainly centralized computer cluster, and the scale is limited.</p>
+                            <p>At present, the cost of the construction of distributed system is too expensive for normal programmers or ordinary medium enterprises to use.</p>
+                            <p>So far, there is no big full-fledged platform for lease and rent computing resources in private smartphones and computers, and the enthusiasm of users is difficult to stimulate.</p>
+                            <p>The current system of sharing computing resources are mainly for volunteer in the scientific research field.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="numbered white" id="s3-advantages">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2>3、Advantages </h2>
+                            <span> Advantages </span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <section class="numbered white" id="s2-3">
+                <div class="container">
+                    <div class="row sub heading">
+                        <div class="col-md-12">
+                            <h3>Provide A Blockchain Based Solution</h3>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-6 text-center"><img src="../images/blockchain.png"></div>
+
+                        <div class="col-md-6">
+                            <p>TuDoLink will be a real blockchain-based trading platform which provide a complete and conveniently-deployed solution to the sharing computing resources, the decentralized distributed application and graph databases.</p>
+                            <p>Features of TuDoLink: </p>
+                            <p>It can share data storage and computing power without relying on any third party providers.</p>
+                            <p>Has massive data storage and computing capacity, and be compatible with AI.</p>
+                        </div>
+                    </div>
+
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <p>Provide data interfaces for other blockchains applications.</p>
+                            <p>Integrate all kinds of software and internet application development enterprises into the platform, provide enterprise level distributed network computing system and database platform of low cost and fast deployment.</p>
+                            <p>We encourage users to share their computing resources, such as idle computer or smart phone, to build a decentralized network node. Such a node can be used for runing tasks, storing data, system monitoring and block management.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="s3-2">
+                <div class="container">
+                    <div class="row sub heading">
+                        <h3>Provide Program Guarantee/Insurance</h3>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <p>Our developers are PhDs in computer science from the University of Groningen of the Netherlands, the first Neo4j graph database research team and experts from the open source community etc. We are all at the forefront of the area of distribution system, blockchain, graph databases and shared computing resources. Our team grasps the most advanced core technologies.</p>
+                            <p>
+                                Academic: our founder and development team is composed of PhDs and computer scientists of University of Groningen. We will bring the scientific research technology at the forefront of the scientific research into homes of ordinary people.
+                            </p>
+                            <p>Neo4j: Neo4j graph database is a new database system based on the algorithms of graph theory in mathematics. It is implemented in Java and accessible from software written in other languages using the Cypher Query Language through a transactional HTTP endpoint, or through the binary "bolt" protocol. Neo4j is the most popular graph database according to DB-Engines ranking.</p>
+                            <p>BOINC: Berkeley Open Infrastructure for Network Computing (BOINC) is Berkeley's open network computing platform which is one of the mainstream distributed computing platforms. It is mainly used in the field of astronomy, meteorology and other scientific research fields. BOINC is the core technology of the TuDoLink. On the distributed computing platform of BOINC, there are more than 860000 nodes are online everyday.</p>
+                            <p>TuDoLink is based on the distributed system and graph database theory, combined with blockchain technology and expanded the concept of Neo4j and BOINC open source. It will result a new open source distributed computing and storage system and a trading platform of computing resource.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <section id="s3-3">
+                <div class="container">
+                    <div class="row sub heading">
+                        <h3>Enable Distributed Infrastructure for Bigdata</h3>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        The most advantage of TuDoLink is that it integrates the blockchain technology and sharing technology of distributed computing resource. TuDoLink provides a complete solution of sharing computing resources in blockchain and also establish a computing resources trading platform.
+                                        Compared with traditional database, TuDoLink database has an unmatched advantage in dealing with complex, interconnected and low structured data. It has excellent performance in relational query. It has significantly pulled away from competitors in dealing with massive and distributed data.
+                                        Data explains everything. The three charts below are from DB-Ngines, showing the popularity and community rankings of graph databases in the computing world:
+                                        Data Sources → © http://db-ngines.com/en/ranking/graph+dbms
+                                    </p>
+                                </div>
+                                <div class="col-md-4"><img src="../images/4-1.png" width="100%"></div>
+                                <div class="col-md-4"><img src="../images/4-2.png" width="100%"></div>
+                                <div class="col-md-4"><img src="../images/4-3.png" width="100%"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>As you can see from these data, the Neo4j based graph database has the highest score.</p>
+                                    <p>TuDoLink, based on the graph database in the block chain, keeps the high performance of Neo4j. It increases the characteristics of safety, reliability and cannot be tampered with. At the same time, TuDoLink is easy to expand, and convenient to use and deploy</p>
+                                    <p>The two tables below is a comparison between a traditional database and TuDoLink database: </p>
+                                </div>
+                                <div class="col-md-6"><img src="../images/4-5.png" width="100%"></div>
+                                <div class="col-md-6"><img src="../images/4-4.png" width="100%"></div>
+                                <div class="col-md-12">
+                                    <p>TuDoLink integrates blockchain, graph database,  distributed system and shared economy. Its application prospect is limited only by our own imagination. This is the advantage of the TuDoLink.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="numbered  white" id="s4-business-model">
+                <div class="container">
+                    <div class="row heading text-bg">
+                        <div class="col-md-12">
+                            <h2>4、Technology Roadmap</h2>
+                            <span>Technology Roadmap</span>
+                        </div>
+                        <h3 id="s4-1">TuDoLink Design Principles and Framework</h3>
+                    </div>
+
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <p>Large-scale graph data storage relies on distributed storage system in a blockchain application. There are two types of storage model: simple and hypergraph.</p>
+                            <p>In TuDoLink, every Node, Relationship is stored independently.  As the node names exist in the RDF graph, people must rely on the index if they want to find the corresponding node in the graph. Nodes and Relationship can be assigned properties, and we generally expressed as key-value pairs.</p>
+                            <p>The graph-based storage structure makes the entire data set into a large network structure, and then we use a series of graph operations to achieve the data application and management.</p>
+                            <p>As a graph is made up of Nodes and Relationship and it cannot be fully loaded into memory if a graph has huge data. We store the data into disk and use NoSQL system, a kind of graph-based system, to find graph index and then to load or recall into memory. TuDoLink use a Lueene-based full-text indexing mechanism to achieve the search between Nodes and Relationship.</p>
+                            <p>We make the following requirements for the design of the TuDoLink: </p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-2"><img src="../images/1.png" style="height: 120px;"></div>
+                        <div class="col-md-8">
+                            <h4>Simultaneity </h4>
+                            <p>The data that all clients see is the same version, even if the dataset has been updated.</p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-2"><img src="../images/2.png" style="height: 120px;"></div>
+                        <div class="col-md-8">
+                            <h4>High Availability</h4>
+                            <p>All clients can find at least one version of the requested data even if some machines crash in the cluster. </p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-2"><img src="../images/3.png" style="height: 120px;"></div>
+                        <div class="col-md-8">
+                            <h4>Partition Tolerance</h4>
+                            <p>The whole system maintains its own characteristics even when it is deployed on a different block, which is transparent to the client.</p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-2"><img src="../images/4.png" style="height: 120px;"></div>
+                        <div class="col-md-8">
+                            <h4>Eventual Consistency</h4>
+                            <p>The invalid node can be eliminated on the premise of guaranteeing performance.</p>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <p>We designed TuDoLink according to the principles above and the below two figures show the structure of TuDoLink:</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/4-6.png" style="height: 300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/4-7.png" style="height: 300px;">
+                        </div>
+                        <div class="col-md-12">
+                            <p style="text-align: center;font-weight:600;">Overall Structure of TuDoLink</p>
+                            <p>To optimize the performance of TuDoLink, we have conducted massive improvement on both speed and availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="s4-2">
+                <div class="container">
+                    <div class="row sub heading">
+                        <div class="col-md-12">
+                            <h3>TuDoLink Model Design and Structure</h3>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <div class="row" id="s4-2-1">
+                                <div class="col-md-12">
+                                    <p>TuDoLink model design, on the one hand, is the most professional elaboration of the obscure mathematical model and, on the other hand, is the core of our technology. So in our white paper, we only use some figures to simply show the idea of the core model.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="../images/4-8.png" style="height: 300px;">
+                                    <p style="text-align: center;font-weight:600;">Data node design of TuDoLink</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="../images/4-9.png" style="height: 300px;">
+                                    <p style="text-align: center;font-weight:600;">A example of TuDoLink graph model </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="../images/4-10.png" style="height: 300px;">
+                                    <p style="text-align: center;font-weight:600;">General structure of BOINC </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="../images/4-11.png" style="height: 300px;">
+                                    <p style="text-align: center;font-weight:600;">A global noes distribution map of BOINC</p>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="../images/4-12.png" style="height: 300px;">
+                                    <p style="text-align: center;font-weight:600;">Platform structure of TuDoLink</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <section class="numbered  white" id="s5-technology">
+            <div class="container">
+                <div class="row heading text-bg">
+                    <div class="col-md-12">
+                        <h2>5、Applications Value</h2>
+                        <span>Applications Value</span>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <P>In the real world, all things are in different kinds of connections, such as human relations, computer networks, geographic data and molecular structure model. These connections forms a kind of interlinked data, the link is an essence of the data. TuDoLink could establish such link in many applications.</P>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pull-up" id="s5-1">
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-md-12">
+                        <h3>Applications</h3>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <img src="../images/5-1.png" style="display: block; margin: 0 auto;">
+
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>Social Networking Services</h2>
+                        <p>TuDoLink is designed for processing network node data and it shows excellent performance in graph computing</p>
+                        <img src="../images/5-2.jpg" style="display: block; margin: 0 auto;">
+
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>Big Data</h2>
+                        <p>TuDoLink has massive data processing capability, and through the main chain, the mass data can be distributed processed based on the principal and subordinate mechanism.</p>
+                        <img src="../images/5-3.png" style="display: block; margin: 0 auto;">
+
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>Recommendation System</h2>
+                        <img src="../images/5-4.png" style="display: block; margin: 0 auto; width: 100%;">
+
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2> Fraud Analysis</h2>
+                        <p>In dealing with fraudulent analysis, machine learning and artificial intelligence have an absolute advantage.</p>
+                        <p>Graphic database technology is the most powerful way to recognize and utilize large-scale data connections.</p>
+                        <div class="col-md-12">
+                            <img src="../images/5-5.png" style="display: block; margin: 0 auto;">
+                            <p style="font-weight: 700;text-align: center;display: inherit;">Identification of Credit Card Fraud Rings</p>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="../images/5-6.png" style="display: block; margin: 0 auto;">
+                            <p style="font-weight: 700;text-align: center;display: inherit;">HSBC:  Swiss Leaks(ICIJ event)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>WEB Safety</h2>
+                        <p>ToDoLink could be uses for identifying the source of spam mailbox.</p>
+                        <div class="col-md-12">
+                            <img src="../images/5-7.png" style="display: block; margin: 0 auto;">
+                            <p style="font-weight: 700;text-align: center;display: inherit;">Identifying the source of spam mailbox</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>Knowledge Map</h2>
+                        <p>Knowledge map shows the complex knowledge field through data mining, information processing, knowledge measurement and graphics rendering, reveal the dynamic development rule in knowledge field, and provide a valuable reference for discipline research.</p>
+                        <p>Users can easily create a knowledge map by TuDoLink.</p>
+                        <div class="col-md-12">
+                            <img src="../images/5-8.png" style="display: block; margin: 0 auto;">
+                            <p style="font-weight: 700;text-align: center;display: inherit;">Knowledge map of a math sub-fields</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <h2>Artificial intelligence</h2>
+                        <p>TuDoLink will provide the DAI interface which could support distributed computing in artificial intelligence area.</p>
+                        <p>The distributed computing system could process and analyze massive data which distributed in different nodes. </p>
+                        <img src="../images/5-9.jpg" style="display: block; margin: 0 auto;">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="pull-up" id="s5-2">
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-md-12">
+                        <h3>Potential Customers and Partners</h3>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <p>Here are some companies who are using graph database. They are our potential customers and partners in blockchain.  </p>
+                        <img src="../images/5-10.png" style="display: block; margin: 0 auto;">
+                        <p>Some research fields, such as physics, astronomy and biology, require much computing power. TuDoLink could be a powerful tool in these fields.</p>
+                        <p>In deep learning and big data analytics, research groups and companies that require significant computing resources, such as deep learning and big data analytics, will also be our target customers.</p>
+                        <p>More broadly, TuDoLink could be used for all projects who require storage and computing resources based on blockchain.</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!--
+        <style type="text/css">
+
+        #timeline {height: 200px;overflow: hidden;margin: 50px auto;position: relative;background: url('../images/dot.gif') left 45px repeat-x;}
+        #dates {width: 2000px!important;height: 60px;overflow: hidden;}
+        #dates li {list-style: none;float: left;width: 150px;height: 50px;font-size: 24px;text-align: center;background: url('images/biggerdot.png') center bottom no-repeat; margin:0 20px; }
+        #dates a {line-height: 38px;padding-bottom: 10px; text-decoration: none; color:#333;}
+        #dates .selected {font-size: 32px;display: block; width: 200px; color:  #ffcc00;}
+        #issues {width: 100%;height: 200px;overflow: hidden;}
+        #issues li { width:1140px;height: 200px;list-style: none;float: left;display: inline-block;}
+        #issues li h1 {color: #ffcc00;font-size: 32px;margin: 20px 0;text-shadow: #ccc 1px 1px 2px; width: 1100px;}
+        #issues li p {font-size: 14px; margin:10px; font-weight: normal;line-height: 22px; color:grey;}
+            </style>
+        -->
+        <section class="numbered white" id="s6-team">
+            <div class="container">
+                <div class="row heading text-bg">
+                    <div class="col-md-12">
+                        <h2>6、Roadmap and Team</h2>
+                        <span>Roadmap and Team</span>
+                    </div>
+                </div>
+                <img src="../images/Roadmap.png" style="display: block; margin: 0 auto;">
+                <!--
+                      <div class="row content">
+                          <div id="timeline">
+                             <ul id="dates">
+                                <li><a href="#2005">2015 Q2</a></li>
+                                <li><a href="#2006">2016 Q1</a></li>
+                                <li><a href="#2007">2017 Q1</a></li>
+                                <li><a href="#2008">2018 Q1</a></li>
+                                <li><a href="#2009">2018 Q2</a></li>
+                                <li><a href="#2010">2018 Q4</a></li>
+                                <li><a href="#2011">2019 Q1</a></li>
+                                      <li><a href="#2012">2019 Q2</a></li>
+                             </ul>
+
+                             <ul id="issues" >
+                                    <li id="2005">
+                                        <H1 class="visible-lg">Experiments based on Neo4J and blockchain,Reasarches on parallel com puting ,deep learning and distributed systems.</H1>
+                                    </li>
+                                    <li id="2006">
+                                        <H1 class="visible-lg">Established company Chiwen B.V. in Groningen,the Netherlands,Established long_term research partnership with Universities of Groningen</H1>
+                                    </li>
+                                    <li id="2007">
+                                        <H1 class="visible-lg">Create ateam and study machine learning , distributed training, and brain-inspired padttern recognition algorithms</H1>
+                                    </li>
+                                    <li id="2008">
+                                        <H1 class="visible-lg">Start TuDoLink project;Set up partners and investors team</H1>
+                                    </li>
+                                    <li id="2009">
+                                        <H1 class="visible-lg">Release TuDoLink tokens</H1>
+                                    </li>
+                                    <li id="2010">
+                                        <H1 class="visible-lg">Release TuDoLink Beta V0.1</H1>
+                                    </li>
+                                    <li id="2011">
+                                        <H1 class="visible-lg">Release TuDoLink official version of main network ,Distribute computing nodes globally</H1>
+                                    </li>
+                                    <li id="2012">
+                                        <H1 class="visible-lg">Release TuDoLink computing task trading platform globally</H1>
+                                    </li>
+                             </ul>
+                          </div>
+                      </div>
+                -->
+            </div>
+        </section>
+        <section class="numbered team light" id="s6-2">
+            <style type="text/css">
+                .center-xs div p i, .advisors__block div div a i {
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 2px;
+                    background: url(../images/icon1.png);
+                }
+            </style>
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-xs-12">
+                        <h2>Project R & D Team</h2>
+                    </div>
+                </div>
+                <div class="row content center-xs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/laura-fern%C3%A1ndez-robles-10755257/" target="_blank">
+                            <img src="../images/team/LAURA.png" alt="Assistant Professor of University of Leon">
+                            <p>Laura Fernández Robles <i></i>  </p>
+                            <b>
+                                Assistant Professor of University of Leon
+                                ;PhD of University of Leon
+                                ;PhD of University of Groningen;
+                                Computer scientist in machine learning, mathematics, artificial intelligence and pattern recognition.
+                            </b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/nicolastrisciuglio/" target="_blank">
+                            <img src="../images/team/NICOLA STRISCIUGLIO.png" alt="Ph.D. of University of Salerno">
+                            <p>NICOLA STRISCIUGLIO <i></i>  </p>
+                            <b>Postdoctoral researcher of University of Groningen;Ph.D. of University of Salerno. Computer scientist in distributed system, artificial intelligence, pattern recognition, big data and internet of things. VIPIMAGE's 2015 best paper award.</b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="http://www.jiapan.nl" target="_blank">
+                            <img src="../images/team/JIAPAN GUO.png" alt="Ph.D. of University of Groningen ">
+                            <p>JIAPAN GUO<i></i></p>
+                            <b>Postdoctoral researcher of University Medical Center Groningen;Ph.D. of University of Groningen. Computer scientist in distributed system, deep learning, big data, graphic data field and medical image processing.</b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/ugomoschini/" target="_blank">
+                            <img src="../images/team/UGO MOSCHINI.png" alt="Ph.D. of University of Groningen ">
+                            <p>UGO MOSCHINI<i></i></p>
+                            <b>Ph.D. of University of Groningen. Computer scientist in distributed system, parallel computing, big data, intelligent system, robotics, neuroscience, pattern analysis and remote sensing image processing.</b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/estefanía-talavera-martínez-995b5873/" target="_blank">
+                            <img src="../images/team/ESTEFANÍA TALAVERA MARTÍNEZ.png" alt="Ph.D. of University of Groningen ">
+                            <p>ESTEFANÍA TALAVERA MARTÍNEZ<i></i></p>
+                            <b>Ph.D. of University of Groningen;Ph.D. of University of Barcelona. Computer scientist in distributed system,lifelogging, deep learning, artificial intelligence, pattern recognition and big data</b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/astoneshi/" target="_blank">
+                            <img src="../images/team/CHENYU SHI.png" alt="Ph.D. of University of Groningen ">
+                            <p>CHENYU SHI<i></i></p>
+                            <b>Ph.D. of University of Groningen. Computer scientist in distributed system, graph database, blockchain, machine learning, deep learning, pattern recognition</b><span></span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="#" target="_blank">
+                            <img src="../images/team/YIN CHOW.png" alt="Senior block chain R & D experts">
+                            <p>YIN CHOW<i></i></p>
+                            <b>Senior block chain R & D expert. Microsoft MVP Development Engineer once served as a number of Internet, listed company executives</b><span></span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row sub heading">
+                    <div class="col-xs-12">
+                        <h2>Marketing Team (Building)</h2>
+                    </div>
+                </div>
+
+                <div class="row content center-xs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/astoneshi/" target="_blank">
+                            <img src="../images/team/CHENYU SHI.png" alt="Ph.D. of University of Groningen ">
+                            <p>CHENYU SHI<i></i></p>
+                            <b>Marketing Director; Ph.D. of University of Groningen. Computer scientist in distributed system, graph database, blockchain, machine learning, deep learning, pattern recognition</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="http://www.jiapan.nl" target="_blank">
+                            <img src="../images/team/JIAPAN GUO.png" alt="Ph.D. of University of Groningen ">
+                            <p>JIAPAN GUO<i></i></p>
+                            <b>General Marketing Manager; Postdoctoral researcher of University Medical Center Groningen;Ph.D. of University of Groningen. Computer scientist in distributed system, deep learning, big data, graphic data field and medical image processing.</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/will-o-brien-73b7a0b5/" target="_blank">
+                            <img src="../images/team/WILL.png" alt="Marketing Manager">
+                            <p>Will O'Brien<i></i>  </p>
+                            <b>Marketing Manager; Initial Coin Offering Marketing Advisor;Entrepreneur, Freelance ICO and Blockchain consultant, Community Leader and Cryptocurrency market analyst</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/talaviaharshit/" target="_blank">
+                            <img src="../images/team/HarshitTalavia.png" alt="India Marketing Manager">
+                            <p>Harshit Talavia<i></i>  </p>
+                            <b>India Marketing Manager; Initial Coin Offering Marketing Advisor</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.linkedin.com/in/tim-buhr-6b1832103/" target="_blank">
+                            <img src="../images/team/TimBuhr.png" alt="Germany Marketing Manager">
+                            <p>Tim Michael Buhr<i></i>  </p>
+                            <b>Germany Marketing Manager; Advisory Manager;</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="" target="_blank">
+                            <img src="../images/team/EddieDamsma.png" alt="France Marketing Manager">
+                            <p>Eddie Damsma<i></i>  </p>
+                            <b>France Marketing Manager; Initial Coin Offering Marketing Advisor;</b><span></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="#" target="_blank">
+                            <img src="../images/team/JING SHAO.png" alt="Promoter of CICPA mutual gold circle at Southeast University">
+                            <p>JING SHAO<i></i></p>
+                            <b>China(Mainland) Marketing Manager;Promoter of CICPA mutual gold circle at Southeast University. Once in charge of Huarun, first brigade and other financial leaders, mainly engaged in block chain investment, venture capital and equity investment</b><span></span>
+                        </a>
+                    </div>
+
+
+                </div>
+
+                <div class="row sub heading">
+                    <div class="col-xs-12">
+                        <h2>Legal Team</h2>
+                    </div>
+                </div>
+                <div class="row content center-xs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <a href="https://www.aigbelaw.com/" target="_blank">
+                            <img src="../images/team/Destiny Aigbe.png" alt="ICO Lawyer">
+                            <p>Destiny Aigbe<i></i></p>
+                            <b>U.S. securities lawyer; practice on public offerings/going public transactions, reverse mergers, initial coin offerings (ICOs), private placements, mergers & acquisitions, public company filings, PIPEs, secondary offerings and other corporate finance work in the middle market/microcap space.</b><span></span>
+                        </a>
+                    </div>
+                </div>
+
+
+        </section>
+
+        <section class="numbered  white" id="s6-3">
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-xs-12">
+                        <h2>Advisory Board</h2>
+                        <span>Advisory Board</span>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="advisors__block">
+                            <div class="row">
+                                <div class="col-xs-5"><img src="../images/team/NICOLAI PETKOV.png" alt="Professor of computer science at the University of Groningen"> </div>
+                                <div class="col-xs-7">
+                                    <a href="http://www.cs.rug.nl/~petkov/">NICOLAI PETKOV<i></i></a><b>Professor of computer science at the University of Groningen<br>Head of the system of Intelligent Systems<br>Member of the University Council</b><span></span>
+                                    <p>Author of two monographs and coauthor of another book on parallel computing, holds four patents and has authored over 100 scientific papers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="advisors__block">
+                            <div class="row">
+                                <div class="col-xs-5"><img src="../images/team/GEORGE AZZOPARDI.png" alt="Assistant Professor of University of Groningen"> </div>
+                                <div class="col-xs-7">
+                                    <a href="http://www.cs.rug.nl/~george/%20Zhi%20zhang">GEORGE AZZOPARDI<i></i></a><b>Assistant Professor of University of Groningen<br>Senior AI Specialist at Crowdynews<br>Affiliated with the University of Malta</b><span></span>
+                                    <p>Award of the Tenure Track project. The founder of the COSFIRE algorithm in the field of pattern recognition and machine vision.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="advisors__block">
+                            <div class="row">
+                                <div class="col-xs-5"><img src="../images/team/ZHI ZHANG.png" alt="Founder of cloud poly (Beijing) Technology Co., Ltd."> </div>
+                                <div class="col-xs-7">
+                                    <a href="#">ZHI ZHANG<i></i></a><b>Founder of cloud poly (Beijing) Technology Co., Ltd.</b><span></span>
+                                    <p>The inventor of the core technology of the WPS curve of Chinese characters. He has long been a senior software designer in Microsoft and a technical director of the "Venus program". And lead the development of China Mobile 139 mobile phone mailbox and other star commercial products.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="advisors__block">
+                            <div class="row">
+                                <div class="col-xs-5"><img src="../images/team/MANUEL ANTONIO LÓPEZ ANTEQUERA.png" alt="MANUEL ANTONIO LÓPEZ ANTEQUERA移动产品开发和推广顾问"> </div>
+                                <div class="col-xs-7">
+                                    <a href="https://www.linkedin.com/in/mlopezantequera/">MANUEL ANTONIO LÓPEZ ANTEQUERA<i></i></a><b>Ph.D. of University of Groningen<br>Ph.D. of University of Málaga</b><span></span>
+                                    <p>Computer scientist in deep learning, robotics, distributed system, parallel computing, big data and pattern recognition</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="advisors__block">
+                            <div class="row">
+                                <div class="col-xs-5"><img src="../images/team/XIYUAN HU.png" alt="XIYUAN HU法律和赌博问题顾问"> </div>
+                                <div class="col-xs-7">
+                                    <a href="#">XIYUAN HU<i></i></a><b>Ph.D. of the Institute of automation, Chinese Academy of Sciences</b><span></span>
+                                    <p>Harvard University medical school, visiting scholar research field signal adaptive decomposition theory, video and image processing, physiological signal analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="numbered roadmap white" id="s7-sale">
+            <div class="container">
+                <div class="row heading text-bg">
+                    <div class="col-md-12">
+                        <h2>7、Tokens</h2>
+                        <span>Tokens</span>
+                    </div>
+                    <div class="col-md-12">
+                        <P>
+                            TuDoLink will generate and support two types of tokens: TUDO (TuDoLink Token) and TGAS (TuDoLinkGas Network Token). TUDO will be generated by Ethereum Smart Contract an ERC-20 standard token. TGAS will be voted and decided by all the investors
+                        </P>
+                        <P>
+                            TUDO is support users to trade in the market of digital currency or other market outside of the TuDoLink platform. Investors who hold TUDO will play the role of shareholder of the project and they could join the shareholders' general meeting. They could discuss and vote the distribution of corporate profits of the TuDoLink project. When the time is right for the project, we will consider repurchasing the TUDO.
+                        </P>
+                        <P>
+                            TGAS will only be used in the sharing and trading platform of idle computing resources. People who share their computing resources will get TGAS and poeople who use the TuDoLink system will pay the TGAS. The future and whereabouts of the TGAS will be discussed and decided by all investors of TuDoLink.
+
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pull-up" id="s7-1">
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-md-12">
+                        <h3>Sale Stage</h3>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Total Generate</th>
+                                    <td><strong><span class="nowrap">2,666,666,666</span></strong> TUDO (Equivalent 30% stock rights of the company CHIWEN B.V.)</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Token Available for Sale</th>
+                                    <td>62% (1,653,333,333 TUDO)</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Currency Accepted</th>
+                                    <td>ETH</td>
+                                </tr>
+                                <tr>
+                                    <th>Base Exchange Rates</th>
+                                    <td>1 ETH = 7000 TUDO Tokens</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Target Amount Offered (Pre-ICO)</th>
+                                    <td> 3% TUDO -> 10,000+ ETH </td>
+                                </tr>
+                                <tr>
+                                    <th>Target Amount Offered (ICO)</th>
+                                    <td> 59% TUDO  </td>
+                                </tr>
+                                <tr>
+                                    <th>Join Digital Currency Exchange (DCE)</th>
+                                    <td>Before December 2018 (*)</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">(*) We will do our best to join the DCE as soon as possible but in the condition of stability. As you can see our current team is mainly focus on the research and technical part of TuDoLink. We are looking for patner(s) or investor(s) who could in charge of the market and market value management. </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row content">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th colspan="2"></th>
+                                    <th>Token Sale Cap</th>
+                                    <th>Exchange Rate</th>
+                                    <th>End Date</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Pre-ICO Round</th>
+                                    <th>70,000,000 TUDO (3%)</th>
+                                    <td>1 ETH =7,000 TUDO + 50% Bonus</td>
+                                    <td>30th, April, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">ICO Round I</th>
+                                    <th>- TUDO</th>
+                                    <td>1 ETH =7,000 TUDO + 15% Bonus</td>
+                                    <td rowspan="4">December, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">ICO Round II</th>
+                                    <th>Stage 1</th>
+                                    <th>- TUDO</th>
+                                    <td>1 ETH =7,000 TUDO + 10% Bonus</td>
+                                </tr>
+                                <tr>
+                                    <th>Stage 2</th>
+                                    <th>- TUDO</th>
+                                    <td>1 ETH =7,000 TUDO +    5% Bonus</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">ICO Round III</th>
+                                    <th>- TUDO</th>
+                                    <td>1 ETH =7,000 TUDO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <p>Token sale will close or open early if target amount in one round is reached. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row pull-up">
+                    <div class="col-md-6 function">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>Token Distribution</h3>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-md-12">
+                                <img src="../images/7-3.png" alt="" width="100%">
+                                <p class="legend purple">62% (31% + 31%) Purchasers</p>
+                                <p class="legend lightblue">10% Reserve</p>
+                                <p class="legend lightgreen">3% Foundation</p>
+                                <p class="legend lilac">10% Team</p>
+                                <p class="legend coral">5% Community Group & Strategy Partners</p>
+                                <p class="legend blue">10% Consultants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 function">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>Use of Funds</h3>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-md-12">
+                                <img src="../images/7-4.png" alt="" width="100%">
+                                <p class="legend purple">40% Research, Platform Development and expansion</p>
+                                <p class="legend lightblue">30% Marketing</p>
+                                <p class="legend lightgreen">15% Business Development and Partnerships</p>
+                                <p class="legend lilac">10% Legal and Misc Operations</p>
+                                <p class="legend coral">5% Consultants</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pull-up" id="s7-2">
+            <div class="container">
+                <div class="row sub heading">
+                    <div class="col-md-12">
+                        <h3>TGAS (TuDoLinkGas Network Token）</h3>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-12">
+                        <div class="row" id="s5-1-1">
+                            <div class="col-md-12">
+                                <p>TGAS (TuDoLinkGas Network Token) is the “fuel” of the TuDoLink platform, which can be obtained by sharing computing resources of computers and smart phones on TuDoLink, such as spaces of hard drive and memories and computing power of CPUs and GPUs etc. TuDoLink will assign to all nodes that contribute computing resources according to a certain algorithm. We do the following definition:</p>
+                                <p>a. The value of 1 TGAS is the total cost of resources and energy consumed by executing one million basic computer instructions in a single node.</p>
+                                <p>b. A node could get 1 TGAS by sharing a standard processor or graphics card or memory resources or hard disk resources within a single unit time.</p>
+                                <p>c. A node could get 10 extra TGAS when it continuously shares resources hit each 100 unit time.</p>
+
+                                <p style="margin-top: 10px;">TuDoLink will use these shared computing resources to build a global decentralized distributed network computing system (TuDoLink Clouds Computing) and graph databases (TuDoLink Database). People who want to use this system or other resources of the TuDoLink must pay the TGAS: </p>
+                                <p>a. 0.1 TGAS will be required for executing one million basic computer instructions in a single node.</p>
+                                <p>b. 0.1 TGAS need to pay when you want to use a standard processor or graphics card or memory resources or hard disk resources within a single unit time.</p>
+
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="numbered white" id="s8-regulation">
+            <div class="container">
+                <div class="row heading text-bg">
+                    <div class="col-md-12">
+                        <h2>8、Risk and Regulation</h2>
+                        <span>Risk and Regulation</span>
+                    </div>
+                </div>
+                <div class="row pull-up">
+                    <div class="col-md-12" id="s8-1">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>Risk of Token</h3>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-md-12">
+                                <p>TuDoLink is not designed to be an investment platform and cryptocurrency.</p>
+                                <p>The purpose of TuDoLink Token is to drive users to participate in the use of the task platform, the blockchain graph database and other products.</p>
+                                <p>Compared with other assets (such as stocks, bonds and other alternative investments), the volatility of digital currency is unstable. Be cautious to buy TuDoLink tokens that exceed your range. The best way is to diversify the portfolio and make the digital currency a reasonable part of your assets. This does not constitute an investment proposal, it is common sense. </p>
+                                <p>Similar with any other blockchain project, you are supposed to take time to understand our project and vision. Our goal is to finance people who cherish the same mind and want to actively participate in our open research platform.</p>
+                                <p>The regulatory risk digital currency is seen as a gray zone in the United States and China. The regulatory environment of blockchain and digital currency is still in the primary stage of development. We will do our best to comply with the development of all laws and regulatory policies, although we cannot foresee how the laws and regulations will affect our projects and the development of our platforms.</p>
+                                <p>In China, TuDoLink will strictly abide by relevant laws and regulations, including but not limited to related laws and regulations such as finance, securities, etc. In the presence or occurrence of relevant registration, approval, filing and other procedures, TuDoLink will strictly follow the procedures to perform the relevant procedures. Meanwhile, TuDoLink will strictly abide by the provisions of the current laws and regulations concerning the restrictions on the sponsors and the control of foreign exchange. In any area where TuDoLink is developing blockchain-related business, TuDoLink will comply with relevant laws and regulations, including, but not limited to, registration, approval, filing and other related procedures.</p>
+                                <p>TuDoLink Token refers to other well-known encryption digital currency. We plan to set up the non-profit foundation. The main task of the foundation is to operate the token ecosystem in an open, fair and transparent way, and support the development team of tokens. The team will choose the registration place according to the legal advice.</p>
+                                <p>The release of TuDoLink Token is not open to China, the United States and other areas that are not permitted by laws.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="numbered light" id="s8-2">
+            <div class="container">
+                <div class="row pull-up">
+                    <div class="col-md-12">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>Risk of Project</h3>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-md-12">
+                                <p>The risk of the project is the same as any project. The development and execution of our platform will have the risk of delay or failure. Though the major team has a good record in research, development and business management experience, this is not a guarantee for 100% success. The team will strive to achieve the goal described in the project map and will release our progress and challenges we are facing as open as possible.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <section class="numbered light" id="s8-3">
+            <div class="container">
+                <div class="row pull-up">
+                    <div class="col-md-12">
+                        <div class="row sub heading">
+                            <div class="col-md-12">
+                                <h3>Regulation</h3>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-md-12">
+                                <p>The research and development team is a dutch company that has been truly registered. The company is currently located near the University of Groningen in the Netherlands.</p>
+                                <p>Here is the information of the registered company:</p>
+                            </div>
+                            <div class="row content">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <th>Registered company:</th>
+                                                <td>CHIWEN B.V.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Registered Address:</th>
+                                                <td>Planetenlaan 527, 9742HT, Groningen, the Netherlands</td>
+                                            </tr>
+                                            <tr>
+                                                <th>European Tax Number:</th>
+                                                <td>NL855762469B01 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section class="numbered document dark" id="s9-contact">
+            <div class="container">
+                <div class="row heading text-bg">
+                    <div class="col-md-12">
+                        <h2>9、Contact Us</h2>
+                        <span>Contacts</span>
+                    </div>
+                </div>
+                <div class="row content">
+                    <address class="col-md-12 text-center">
+                        <p>Please, visit our site at:</p>
+                        <p><a href="https://TuDoLink.io" target="_blank">TuDoLink.io</a></p>
+                        <div class="line"></div>
+                        <p>Our company info:</p>
+                        <p class="larger">CHIWEN B.V.</p>
+                        <p class="subtle">Planetenlaan 527, 9742HT, Groningen, the Netherlands</p>
+                        <p class="subtle"><a href="#" target="_blank">info@TuDoLink.io</a></p>
+                        <p class="subtle"><a href="#" target="_blank">+31 (0) 502112499</a></p>
+                        <div class="line"></div>
+                        <p>If you have some urgent issue please contact:</p>
+                        <div class="card person">
+                            <div class="photo"><img src="../images/team/jiapinguo.png"></div>
+                            <div class="info">
+                                <h5 class="name">Amber</h5>
+                                <div class="position subtle">Marketing Manager</div>
+                                <a class="email" href="#" target="_blank">amber@TuDoLink.io</a>
+                            </div>
+                        </div>
+                        <p>Follow us and Stay tuned:</p>
+                        <!--
+                            <div class="row center-xs">
+                                 <div class="col-sm-4 col-xs-10"><a class="card network larger" href="https://t.me/tudolink/" target="_blank"><i style="background: url(../images/icon/3.png); height: 70px;"></i><span>Telegram</span></a> </div>
+                                </div>
+
+                        -->
+                        <div class="row center-xs">
+                            <div class="col-sm-4 col-xs-10"><a class="card network larger" href="https://github.com/TuDoLink/" target="_blank"><i style="background: url(../images/icon/1.png); height: 70px;"></i><span class="git">GitHub</span></a></div>
+                            <div class="col-sm-4 col-xs-10"><a class="card network larger" href="https://t.me/tudolink/" target="_blank"><i style="background: url(../images/icon/3.png); height: 70px;"></i><span>Telegram</span></a> </div>
+                            <div class="col-sm-4 col-xs-10"><a class="card network larger" href="@("https://medium.com/@tudolink/")" target="_blank"><i style="background: url(../images/icon/2.png); height: 70px;"></i><span>Medium</span></a></div>
+                        </div>
+                        <div class="row start-sm center-xs">
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="https://www.reddit.com/user/tudolinkproject/" target="_blank"><i style="background: url(../images/icon/4.png); height: 50px;"></i><span>Reddit</span></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="https://twitter.com/TuDoLinkProject/" target="_blank"><i style="background: url(../images/icon/5.png); height: 50px;"></i><span>Twitter</span></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="https://www.facebook.com/tudolinkproject/" target="_blank"><i style="background: url(../images/icon/6.png); height: 50px;"></i><span>Facebook</span></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="https://www.linkedin.com/company/tudolink/" tarsget="_blank"><i style="background: url(../images/icon/7.png); height: 50px;"></i><span>Linkedin</span></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="#" target="_blank"><i style="background: url(../images/icon/8.png); height: 50px;"></i><span>Steemit</span></a></div>
+                            <div class="col-md-2 col-sm-4 col-xs-10 center-xs"><a class="card network" href="https://www.youtube.com/watch?v=uCKhzZe76_E/" target="_blank"><i style="background: url(../images/icon/9.png); height: 50px;"></i><span>YouTube</span></a></div>
+                        </div>
+
+                    </address>
+                </div>
+            </div>
+        </section> <section class="document" id="acknowledgments">
+            <div class="container">
+                <div class="row content text-center">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12">
+                        <h2 style="margin-top: 60px;">Acknowledgements:</h2>
+                        <p>
+                            We would like to thank anyone not directly mentioned in this white paper in supporting and
+                            assisting us over all this time. We also want to thank the entire blockchain community for
+                            laying the ground base over the past 8 years to make TuDoLink possible.
+                        </p>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 col-xs-12">
+                        <img class="logo" src="../images/logo-head.png">
+                        <p> <small>WHITE PAPER© 2018</small> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <div class="row middle-md">
+                    <div class="footer__logo col-md-3 center-md col-sm-6 center-sm col-xs-12 center-xs center-lg">
+                        <img src="../images/logo.png" alt="">
+                        <p>TuDoLink.io®  All Rights Reserved</p>
+                    </div>
+                    <div class="ethereum-logo col-md-3 center-md col-sm-6 center-sm col-xs-12 center-xs center-lg"></div>
+                    <div class="footer__nav col-md-6 end-md col-sm-12 center-sm col-xs-12 center-xs end-lg">
+                        <ul>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Bounty Program</a></li>
+                            <li><a href="#">info@TuDoLink.io</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> </div>
+
+    <script type="text/javascript" async="" src="js/watch.js"></script>
+    <script src="js/main.min-c69dbd9b3fa2587ce805e421591c0015.js"></script>
+
+    <script src="js/jquery.timelinr-0.9.53.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $().timelinr({
+                autoPlay: 'true',
+                autoPlayDirection: 'forward',
+                startAt: 4
+            })
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>

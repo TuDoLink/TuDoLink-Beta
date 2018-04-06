@@ -1,0 +1,282 @@
+﻿
+@{
+    ViewBag.Title = "Create Your Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section PageSpecificStyleSheetIncludes{
+
+}
+
+<div class="container" style="padding:100px 0 150px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <div id="authentication-content"> 
+                <h1 class="text-center">Create Account</h1> 
+                <p style="color: #212529; font-size: 14px;">
+                    Thanks for your interest in registering for the token sale. To proceed,
+                    you will first need to log in or create an account.
+                </p>
+
+                <form id="authentication-form" method="post" action="Create">
+                    <div class="form-group">
+                        <label for="accountEmail" style="color: #212529;">Email address</label>
+                        <input name="accountEmail" type="email" class="form-control" id="accountEmail" placeholder="Enter email" data-form-un="1517032480749.76" style="height: 38px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountPassword" style="color: #212529;">Password</label>
+                        <input name="accountPassword" type="password" class="form-control" id="accountPassword" placeholder="Password" data-form-pw="1517032480749.76" style="height: 38px;">
+                    </div>
+
+                    <input name="recommendBy" id="recommendBy" type="hidden" value="@Request["recommendBy"]" />
+
+                    <button id="authentication-create-btn" type="submit" class="btn btn-info btn-lg px-5" data-form-sbm="1517032480749.76" style="pointer-events: auto; height: 56px; width: 157px;">Create</button>
+                    <button id="authentication-log-in-btn" type="button" class="btn btn-info btn-lg px-5" style="height: 56px; width: 157px;">Log In</button>
+                </form>
+                <br>
+                <a href="/recover" style="color: #212529">Forgot Password?</a>
+            </div>
+        </div>
+    </div><!--.row-->
+</div>
+
+@section PageSpecificJavascriptIncludes{
+
+    <!--Scripts-->
+
+    <script type="text/javascript">
+        $(function () {
+            $().timelinr({
+                autoPlay: 'true',
+                autoPlayDirection: 'forward',
+                startAt: 4
+            });
+
+            $('#authentication-form').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    accountEmail: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The email address cannot be empty'
+                            },
+                            emailAddress: {
+                                message: 'Please enter the correct emaill：hello@tudolink.com'
+                            },
+                            threshold: 4,  
+                            remote: { 
+                                url: 'ValidName', 
+                                message: 'Email has been registered', 
+                                delay: 2000, 
+                                type: 'POST',  
+                                data: function (validator) {
+                                    return {
+                                        email: $('[name="accountEmail"]').val(),
+                                    };
+                                }
+
+                            },
+                        }
+                    },
+                    accountPassword: {
+                        message: 'Sorry,authentication failed',
+                        validators: {
+                            notEmpty: {
+                                message: 'Name and password cannot be empty'
+                            }
+                        }
+                    },
+                }
+            });
+
+            $('#authentication-form').submit(function (ev) { ev.preventDefault(); });
+            $('#authentication-create-btn').click(function () {
+                var bootstrapValidator = $("#authentication-form").data('bootstrapValidator');
+                bootstrapValidator.validate();
+                if (bootstrapValidator.isValid()) {
+                    //$("#authentication-form").attr('action', 'Create');
+                    //$("#authentication-form").submit();
+                    document.getElementById("authentication-form").submit();
+                }
+                else return;
+            });
+            $('#authentication-log-in-btn').click(function () {
+                $("#authentication-form").attr('action', 'Login');
+                $("#authentication-form").bootstrapValidator('removeField', 'accountEmail');
+                $("#authentication-form").bootstrapValidator('addField', 'accountEmail', {
+                    validators: {
+                        notEmpty: {
+                            message: 'Email has been registered'
+                        },
+                        emailAddress: {
+                            message: 'Please enter the correct emaill：hello@tudolink.com'
+                        }
+                    }
+                });
+                var bootstrapValidator = $("#authentication-form").data('bootstrapValidator');
+                bootstrapValidator.validate();
+                if (bootstrapValidator.isValid()) {
+                    //$("#authentication-form").submit();
+                    //document.getElementById("authentication-form").submit();
+                    //return;
+
+                    $.post('Login', {
+                        accountEmail: $('#accountEmail').val(),
+                        accountPassword: $('#accountPassword').val()
+                    }, function (data) {
+                        if (data.success) {
+                            var url = data.msg;
+                            if (url == null) {
+                                url = "/";
+                            }
+                            location.href = url;
+                        } else {
+                            alert(data.msg);
+                        }
+                    });
+                }
+                else return;
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#home-main-nav-lang').click(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).find('dl').hide();
+                }
+                else {
+                    $(this).addClass('active');
+                    $(this).find('.lang-box').height(65);
+                    $(this).find('dl').show();
+                }
+            }).on('success.form.bv', function (e) {
+                // Prevent form submission
+                e.preventDefault();
+                // Get the form instance
+                var $form = $(e.target);
+                // Get the BootstrapValidator instance
+                var bv = $form.data('bootstrapValidator');
+                // Use Ajax to submit form data
+                $.post($form.attr('action'), $form.serialize(), function (result) {
+                    console.log(result);
+                }, 'json');
+            });;
+
+            $('#home-main-nav-lang a').click(function () {
+                var url = $(this).attr('href');
+                location.href = url;
+            });
+
+        });
+    </script>
+
+    <script>
+        function Star(id, x, y) {
+            this.id = id;
+            this.x = x;
+            this.y = y;
+            this.r = Math.floor(Math.random() * 2) + 1;
+            var alpha = (Math.floor(Math.random() * 10) + 1) / 10 / 2;
+            this.color = "rgba(255,255,255," + alpha + ")";
+        }
+
+        Star.prototype.draw = function () {
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = this.r * 2;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        Star.prototype.move = function () {
+            this.y -= .15;
+            if (this.y <= -10) this.y = HEIGHT + 10;
+            this.draw();
+        }
+
+        Star.prototype.die = function () {
+            stars[this.id] = null;
+            delete stars[this.id];
+        }
+
+
+        function Dot(id, x, y, r) {
+            this.id = id;
+            this.x = x;
+            this.y = y;
+            this.r = Math.floor(Math.random() * 5) + 1;
+            this.maxLinks = 2;
+            this.speed = .5;
+            this.a = .5;
+            this.aReduction = .005;
+            this.color = "rgba(255,255,255," + this.a + ")";
+            this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+
+            this.dir = Math.floor(Math.random() * 140) + 200;
+        }
+
+        Dot.prototype.draw = function () {
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = this.r * 2;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        Dot.prototype.link = function () {
+            if (this.id == 0) return;
+            var previousDot1 = getPreviousDot(this.id, 1);
+            var previousDot2 = getPreviousDot(this.id, 2);
+            var previousDot3 = getPreviousDot(this.id, 3);
+            if (!previousDot1) return;
+            ctx.strokeStyle = this.linkColor;
+            ctx.moveTo(previousDot1.x, previousDot1.y);
+            ctx.beginPath();
+            ctx.lineTo(this.x, this.y);
+            if (previousDot2 != false) ctx.lineTo(previousDot2.x, previousDot2.y);
+            if (previousDot3 != false) ctx.lineTo(previousDot3.x, previousDot3.y);
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        function getPreviousDot(id, stepback) {
+            if (id == 0 || id - stepback < 0) return false;
+            if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+            else return false;//getPreviousDot(id - stepback);
+        }
+
+        Dot.prototype.move = function () {
+            this.a -= this.aReduction;
+            if (this.a <= 0) {
+                this.die();
+                return
+            }
+            this.color = "rgba(255,255,255," + this.a + ")";
+            this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+            this.x = this.x + Math.cos(degToRad(this.dir)) * this.speed,
+                this.y = this.y + Math.sin(degToRad(this.dir)) * this.speed;
+
+            this.draw();
+            this.link();
+        }
+
+        Dot.prototype.die = function () {
+            dots[this.id] = null;
+            delete dots[this.id];
+        }
+
+
+    </script>
+
+}

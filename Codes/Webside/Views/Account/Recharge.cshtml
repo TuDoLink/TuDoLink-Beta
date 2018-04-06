@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Recharge";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container" style="padding: 100px 0 40px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <h1 class="text-center">Next Steps</h1>
+            <p>Thanks for registering. Please complete the fields below.</p>
+            <p>The release of TuDoLink Token is not open to China, the United States and other areas that are not permitted by laws.</p>
+            <form id="preorder-form" class="form-inline" action="Rechange" method="post">
+                <div class="form-group" style="display: block; margin-top: 20px;">
+                    <label for="id_desired_contribution_0">Telegram Handle</label>
+                    <div class="input-group">
+
+                        <div class="input-group-addon" style="height: 38px;">@@</div>
+                        <input name="telegramHandle" type="text" class="form-control" id="TelegramHandle" style="height: 38px;">
+                    </div>
+                </div>
+                <div class="form-group" style="display: block; margin-top:20px;">
+
+                    <label for="id_desired_contribution_0">Desired Contribution</label>
+                    <div class="col-md-12">
+                        <div class="btn-group btn-group-toggle row" data-toggle="buttons">
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="1-5" id="id_desired_contribution_0" required="">
+                                1-5 ETH
+                            </label>
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="6-10" id="id_desired_contribution_1" required="">
+                                6-10 ETH
+                            </label>
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="11-30" id="id_desired_contribution_2" required="">
+                                11-30 ETH
+                            </label>
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="31-50" id="id_desired_contribution_3" required="">
+                                31-50 ETH
+                            </label>
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="51-100" id="id_desired_contribution_4" required="">
+                                51-100 ETH
+                            </label>
+
+                            <label class="btn btn-info btn-lg col-md-4 btn-box">
+                                <input type="radio" name="desiredContribution" value="101+" id="id_desired_contribution_5" required="">
+                                101+ ETH
+                            </label>
+
+                        </div><!--.col-12-->
+                    </div><!--.form-group-->
+                </div><!--.btn-group-->
+                <div class="form-group" style="display: block; margin-top:20px;">
+                    <label for="ethAddress">Wallet(ETH Address)</label>
+                    <input name="ethAddress" type="text" class="form-control" id="ethAddress" placeholder="ETH Address" style="height: 38px;">
+                </div><!--.form-group-->
+                <input type="submit" value="Submit" class="btn btn-info btn-lg px-5" style="margin-top:20px;">
+            </form>
+        </div>
+    </div><!--.row-->
+</div>
+
+
+
+@section PageSpecificJavascriptIncludes{
+    <script type="text/javascript">
+
+        $('#preorder-form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                telegramHandle: {
+                    validators: {
+                        notEmpty: {
+                            message: '不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 250,
+                            message: '用户名长度必须在6到250之间'
+                        },
+                    }
+                },
+                desiredContribution: {
+                    validators: {
+                        notEmpty: {
+                            message: '请选择Contribution'
+                        },
+                    }
+                },
+                addressETH: {
+                    validators: {
+                        notEmpty: {
+                            message: '不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 250,
+                            message: '用户名长度必须在6到250之间'
+                        },
+                    }
+                }
+                },
+
+        });
+    </script>
+}
