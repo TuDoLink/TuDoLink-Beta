@@ -1,0 +1,53 @@
+﻿
+
+.bottom-box {
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .bottom-box ul {
+        display: inline-block;
+    }
+
+        .bottom-box ul li {
+            float: left;
+            margin-left: 20px;
+            list-style: none;
+        }
+
+            .bottom-box ul li a div {
+                width: 50px;
+                height: 50px;
+            }
+
+.link1 {
+    background: url(../images/link.png) 0 0 no-repeat;
+}
+
+.link2 {
+    background: url(../images/link.png) -50px 0 no-repeat;
+}
+
+.link3 {
+    background: url(../images/link.png) -100px 0 no-repeat;
+}
+
+.link4 {
+    background: url(../images/link.png) -150px 0 no-repeat;
+}
+
+.link5 {
+    background: url(../images/link.png) -200px 0 no-repeat;
+}
+
+.link6 {
+    background: url(../images/link.png) -250px 0 no-repeat;
+}
+
+.link7 {
+    background: url(../images/link.png) -300px 0 no-repeat;
+}
+
+.link8 {
+    background: url(../images/link.png) -350px 0 no-repeat;
+}
