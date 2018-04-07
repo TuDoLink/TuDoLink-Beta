@@ -47,24 +47,7 @@ namespace TudolinkWeb.Controllers
                 Result result = new Result();
                 result.success = false;
                 var user = db.FirstOrDefault<TB_User>("where Email=@0", accountEmail);
-                if (user == null)
-                {
-                    result.msg = ("User name does not exist.");
-                    result.success = false;
-                    return Json(result);
-                }
-                if (user.Password != accountPassword)
-                {
-                    result.msg = ("The username or password is incorrect.");
-                    result.success = false;
-                    return Json(result);
-                }
-                if (!user.EmailValid)
-                {
-                    result.msg = ("The Email unverified, Please Verify your email.");
-                    result.success = false;
-                    return Json(result);
-                }
+
                 Session["UserInfo"] = user;
 
                 result.success = true;
@@ -108,23 +91,6 @@ namespace TudolinkWeb.Controllers
                         recommendBy = Session["recommendBy"].ToString();
                     }
                 }
-                if (!string.IsNullOrEmpty(recommendBy))
-                {
-                    var recommend = db.FirstOrDefault<TB_User>("where Email=@0 Or Id=@0", recommendBy);
-                    if (recommend != null)
-                    {
-                        user.RecommendBy = recommend.Id;
-                    }
-                }
-
-                user.CreateAt = DateTime.Now;
-                user.Insert();
-
-                Session["UserInfo"] = user;
-                var url = Request.Url.ToString().Replace(Request.Url.PathAndQuery, "");
-
-                VerifyUtil.SendEmailValidCode(user.Email, url);
-
                 return RedirectToAction("ValidEmail");
             }
         }
@@ -157,27 +123,12 @@ namespace TudolinkWeb.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else
-                {
-                    Session["UserInfo"] = db.FirstOrDefault<TB_User>("where Id=@0", CurrentUserInfo.Id);
-
-                    if (CurrentUserInfo.EmailValid)//刷新页面，重新获取用户信息，已验证邮箱则跳回首页。
-                    {
-                        return Redirect("/Home/Index");
-                    }
-                }
                 return View();
             }
             else
             {
 
                 var message = "";
-                TB_User user = null;
-                if (!VerifyUtil.CheckEmailVerfyCode(code, out user, out message))
-                {
-                    return Content(message);
-                }
-
                 Session["UserInfo"] = user;
 
                 return RedirectToAction("Recharge");
