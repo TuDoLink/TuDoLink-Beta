@@ -36,7 +36,6 @@ namespace TudolinkWeb.Utils
         static void Main1(string[] args)
         {
             String tos = "to1@sendcloud.org;to2@sendcloud.org";
-            //Send(tos);
             Console.ReadKey();
         }
 
