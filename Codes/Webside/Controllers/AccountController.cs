@@ -87,7 +87,7 @@ namespace TudolinkWeb.Controllers
         /// </summary>
         /// <returns></returns>    
         [HttpPost]
-        public ActionResult Create(string accountEmail, string accountPassword, string recommendBy)
+        public ActionResult Create(string accountEmail, string accountPassword)
         {
             using (var db = new Database("DefaultConnection"))
             {
@@ -235,7 +235,7 @@ namespace TudolinkWeb.Controllers
         }
 
         [HttpPost]
-        public ActionResult Rechange(string telegramHandle, string desiredContribution, string ethAddress)
+        public ActionResult Rechange(string telegramHandle, string ethAddress)
         {
             if (CurrentUserInfo == null)
             {
