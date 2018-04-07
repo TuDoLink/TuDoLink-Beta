@@ -54,6 +54,7 @@ namespace TudolinkWeb.Utils
                 var enCode = SecurityHelper.DESEncrypt(validCode.Code, key);
 
                 //发送邮件
+                /*
                 var validUrl = url + "/Account/ValidEmail?code=" + enCode;
 
                 var subject = "Welcome to Join Tudolink";
@@ -84,10 +85,11 @@ namespace TudolinkWeb.Utils
                 }
 
                 mailTask.Insert();
-
+            */
                 return true;
             }
         }
+      /*  
         public static string SendMail(string topic, string email)
         {
             AppConfig config = new AppConfig();
@@ -194,7 +196,7 @@ namespace TudolinkWeb.Utils
             return false;
         }
 
-
+*/
 
 
         /// <summary>
