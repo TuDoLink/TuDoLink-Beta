@@ -4,7 +4,7 @@ using System.Text;
 namespace TudolinkWeb.Utils
 {
 	/// <summary>
-	/// DatabaseInfo µÄÕªÒªËµÃ÷¡£
+	/// DatabaseInfo çš„æ‘˜è¦è¯´æ˜ã€‚
 	/// </summary>
 	public class DatabaseInfo
 	{
@@ -13,45 +13,18 @@ namespace TudolinkWeb.Utils
 		}
 
 		/// <summary>
-		/// ¿ÉÒÔ½ÓÊÜÈıÖÖ¸ñÊ½µÄÊı¾İ¿âÁ¬½Ó×Ö·û´®
-		/// 1. ·şÎñÃû³Æ=(local);Êı¾İ¿âÃû³Æ=EDNSM;ÓÃ»§Ãû³Æ=sa;ÓÃ»§ÃÜÂë=123456
+		/// å¯ä»¥æ¥å—ä¸‰ç§æ ¼å¼çš„æ•°æ®åº“è¿æ¥å­—ç¬¦ä¸²
+		/// 1. æœåŠ¡åç§°=(local);æ•°æ®åº“åç§°=EDNSM;ç”¨æˆ·åç§°=sa;ç”¨æˆ·å¯†ç =123456
 		/// 2. Data Source=(local);Initial Catalog=EDNSM;User ID=sa;Password=123456
 		/// 3. server=(local);uid=sa;pwd=;
 		/// </summary>
 		/// <param name="connectionString"></param>
 		public DatabaseInfo(string connectionString)
 		{
-			#region ·şÎñÆ÷Ãû
 
-			this.server = this.GetSubItemValue(connectionString, "·şÎñÃû³Æ");
-			if (this.server == null)
-			{
-				this.server = this.GetSubItemValue(connectionString, "Data Source");
-			}
-			if (this.server == null)
-			{
-				this.server = this.GetSubItemValue(connectionString, "server");
-			}
+			#region ç”¨æˆ·åç§°
 
-			#endregion
-
-			#region Êı¾İ¿âÃû
-
-			this.database = this.GetSubItemValue(connectionString, "Êı¾İ¿âÃû³Æ");
-			if (this.database == null)
-			{
-				this.database = this.GetSubItemValue(connectionString, "Initial Catalog");
-			}
-			if (this.database == null)
-			{
-				this.database = this.GetSubItemValue(connectionString, "database");
-			}
-
-			#endregion
-
-			#region ÓÃ»§Ãû³Æ
-
-			this.userID = this.GetSubItemValue(connectionString, "ÓÃ»§Ãû³Æ");
+			this.userID = this.GetSubItemValue(connectionString, "ç”¨æˆ·åç§°");
 			if (this.userID == null)
 			{
 				this.userID = this.GetSubItemValue(connectionString, "User ID");
@@ -63,9 +36,9 @@ namespace TudolinkWeb.Utils
 
 			#endregion
 
-			#region ÓÃ»§ÃÜÂë
+			#region ç”¨æˆ·å¯†ç 
 
-			this.password = this.GetSubItemValue(connectionString, "ÓÃ»§ÃÜÂë");
+			this.password = this.GetSubItemValue(connectionString, "ç”¨æˆ·å¯†ç ");
 			if (this.password == null)
 			{
 				this.password = this.GetSubItemValue(connectionString, "Password");
@@ -78,7 +51,7 @@ namespace TudolinkWeb.Utils
 			#endregion
 		}
 
-		#region ±äÁ¿¼°ÊôĞÔ
+		#region å˜é‡åŠå±æ€§
 
 		public string Server
 		{
@@ -112,7 +85,7 @@ namespace TudolinkWeb.Utils
 		#endregion
 
 		/// <summary>
-		/// ¼ÓÃÜºóµÄÁ¬½Ó×Ö·û´®
+		/// åŠ å¯†åçš„è¿æ¥å­—ç¬¦ä¸²
 		/// </summary>
 		public string EncryptConnectionString
 		{
@@ -121,7 +94,7 @@ namespace TudolinkWeb.Utils
 
 
 		/// <summary>
-		/// Ã»ÓĞ¼ÓÃÜµÄ×Ö·û´®
+		/// æ²¡æœ‰åŠ å¯†çš„å­—ç¬¦ä¸²
 		/// </summary>
 		public string ConnectionString
 		{
@@ -143,7 +116,7 @@ namespace TudolinkWeb.Utils
 		}
 
 		/// <summary>
-		/// Ìá¹©OLEDBÊı¾İÔ´µÄÁ´½Ó×Ö·û´®
+		/// æä¾›OLEDBæ•°æ®æºçš„é“¾æ¥å­—ç¬¦ä¸²
 		/// </summary>
 		public string OleDbConnectionString
 		{
@@ -154,12 +127,12 @@ namespace TudolinkWeb.Utils
 			}
 		}
 
-		#region ¸¨Öúº¯Êı
+		#region è¾…åŠ©å‡½æ•°
 
 		/// <summary>
-		/// »ñÈ¡¸ø¶¨×Ö·û´®ÖĞµÄ×Ó½ÚµãµÄÖµ, Èç¹û²»´æÔÚ·µ»ØNull
+		/// è·å–ç»™å®šå­—ç¬¦ä¸²ä¸­çš„å­èŠ‚ç‚¹çš„å€¼, å¦‚æœä¸å­˜åœ¨è¿”å›Null
 		/// </summary>
-		/// <param name="itemValueString">¶à¸öÖµµÄ×Ö·û´®</param>
+		/// <param name="itemValueString">å¤šä¸ªå€¼çš„å­—ç¬¦ä¸²</param>
 		/// <param name="subKeyName"></param>
 		/// <returns></returns>
 		private string GetSubItemValue(string itemValueString, string subKeyName)
@@ -168,10 +141,10 @@ namespace TudolinkWeb.Utils
 			for (int i = 0; i < item.Length; i++)
 			{
 				string itemValue = item[i].ToLower();
-				if (itemValue.IndexOf(subKeyName.ToLower()) >= 0) //Èç¹ûº¬ÓĞÖ¸¶¨µÄ¹Ø¼ü×Ö
+				if (itemValue.IndexOf(subKeyName.ToLower()) >= 0) //å¦‚æœå«æœ‰æŒ‡å®šçš„å…³é”®å­—
 				{
-					int startIndex = item[i].IndexOf("="); //µÈºÅ¿ªÊ¼µÄÎ»ÖÃ
-					return item[i].Substring(startIndex + 1); //»ñÈ¡µÈºÅºóÃæµÄÖµ¼´ÎªValue
+					int startIndex = item[i].IndexOf("="); //ç­‰å·å¼€å§‹çš„ä½ç½®
+					return item[i].Substring(startIndex + 1); //è·å–ç­‰å·åé¢çš„å€¼å³ä¸ºValue
 				}
 			}
 			return null;
