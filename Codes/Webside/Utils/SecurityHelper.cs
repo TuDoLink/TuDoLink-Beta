@@ -299,8 +299,8 @@ namespace TudolinkWeb.Utils
             try
             {
                 var keyBytes = Encoding.UTF8.GetBytes(key);
-                //var ivBytes = Encoding.UTF8.GetBytes(iv);
 
+                
                 var des = DES.Create();
                 des.Mode = CipherMode.ECB; //兼容其他语言的 Des 加密算法
                 des.Padding = PaddingMode.Zeros; //自动补 0
@@ -336,8 +336,8 @@ namespace TudolinkWeb.Utils
             try
             {
                 var keyBytes = Encoding.UTF8.GetBytes(key);
-                //var ivBytes = Encoding.UTF8.GetBytes(iv);
 
+                
                 var des = DES.Create();
                 des.Mode = CipherMode.ECB; //兼容其他语言的Des加密算法
                 des.Padding = PaddingMode.Zeros; //自动补0
