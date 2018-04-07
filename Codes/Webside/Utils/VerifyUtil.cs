@@ -8,8 +8,6 @@ using System.Text;
 using System.Web;
 using TudolinkWeb.Models;
 using TudolinkWeb.Service;
-//using WHC.Framework.Commons;
-//using DH.Mail.SendClound;
 
 namespace TudolinkWeb.Utils
 {
@@ -45,7 +43,7 @@ namespace TudolinkWeb.Utils
                 {
                     validCode = new TB_ValidCode();
                     validCode.Target = email;
-                    validCode.Code = GetVerifyCode(6);// new Random().Next(100000, 999999).ToString();
+                    validCode.Code = GetVerifyCode(6);
 
                     validCode.CreateAt = DateTime.Now;
 
@@ -53,93 +51,13 @@ namespace TudolinkWeb.Utils
                 }
                 var enCode = SecurityHelper.DESEncrypt(validCode.Code, key);
 
-                //发送邮件
-                /*
-                var validUrl = url + "/Account/ValidEmail?code=" + enCode;
-
-                var subject = "Welcome to Join Tudolink";
-                //var html = string.Format("<h2>欢迎加入Tudolink</h2><br /><a href='{0}'>点击激活账户</a>", validUrl);
-
-                var path = HttpContext.Current.Server.MapPath("~/Config/validEmail.config");
-                var html = System.IO.File.ReadAllText(path).Replace("{validUrl}", validUrl);
-
-                TB_MailTask mailTask = new TB_MailTask();
-                mailTask.CreateAt = DateTime.Now;
-                mailTask.Subject = subject;
-                mailTask.Detail = html;
-                mailTask.Target = email;
-
-
-                AppConfig config = new AppConfig();
-                var api = config.AppConfigGet("Mail_Api");
-                if (api == "SendCloudApi")
-                {
-                    if (SendCloudApi.Send(email, subject, html))
-                    {
-                        mailTask.SendAt = DateTime.Now;
-                    }
-                }
-                else
-                {
-                    SendMail(subject, null, html, email);
-                }
-
-                mailTask.Insert();
-            */
+               
+                
                 return true;
             }
         }
-      /*  
-        public static string SendMail(string topic, string email)
-        {
-            AppConfig config = new AppConfig();
-
-            var config_port = config.AppConfigGet("Mail_Port");// "info2018TD";;
-            var config_user = config.AppConfigGet("Mail_User");// "info@tudolink.io";
-            var config_password = config.AppConfigGet("Mail_Password");// "info2018TD";
-
-            string sendAddress = config_user;// "info@tudolink.io";
-            string sendPassword = config_password;
-            string receiveAddress = email;
-            string mailAttachment = attachmentUrl;//附件
-            string mailBody = body;//内容
-
-            SmtpClient client = new SmtpClient("smtp.zoho.com");   //设置邮件协议
-
-            client.UseDefaultCredentials = false;//这一句得写前面
-            client.EnableSsl = true;//服务器不支持SSL连接
-
-            client.Port = 587;
-            if (!string.IsNullOrEmpty(config_port))
-            {
-                client.Port = Convert.ToInt32(config_port);
-            }
-            client.DeliveryMethod = SmtpDeliveryMethod.Network; //通过网络发送到Smtp服务器
-            //client.Credentials = new NetworkCredential(sendUsername[0].ToString(), sendPassword); //通过用户名和密码 认证
-            client.Credentials = new NetworkCredential(sendAddress, sendPassword); //通过用户名和密码 认证 
-            MailMessage mmsg = new MailMessage(new MailAddress(sendAddress), new MailAddress(receiveAddress)); //发件人和收件人的邮箱地址
-            mmsg.Subject = topic;//邮件主题
-            mmsg.SubjectEncoding = Encoding.UTF8;//主题编码
-            mmsg.Body = mailBody;//邮件正文
-            mmsg.IsBodyHtml = true;
-            mmsg.BodyEncoding = Encoding.UTF8;//正文编码
-            mmsg.IsBodyHtml = true;//设置为HTML格式           
-            mmsg.Priority = MailPriority.High;//优先级
-            if (!string.IsNullOrEmpty(mailAttachment))
-            {
-                mmsg.Attachments.Add(new Attachment(mailAttachment));//增加附件
-            }
-            try
-            {
-                client.Send(mmsg);
-                return null;
-            }
-            catch (Exception ee)
-            {
-                return ee.Message;
-            }
-        }
-
+  
+        
 
         /// <summary>
         /// 校验邮箱验证码是否正确
