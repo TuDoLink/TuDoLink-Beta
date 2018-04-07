@@ -71,46 +71,25 @@ namespace TudolinkWeb.Utils
         {
             user = null;
             message = string.Empty;
-            try
+
+            code = SecurityHelper.DESDecrypt(code, key);
+
+            using (var db = new SQLiteDababase())
             {
+                var info = db.FirstOrDefault<TB_ValidCode>("where Code=@0", code);
 
-                code = SecurityHelper.DESDecrypt(code, key);
-
-                using (var db = new SQLiteDababase())
-                {
-                    var info = db.FirstOrDefault<TB_ValidCode>("where Code=@0", code);
-                    if (info != null)
-                    {
-
-                        if (info.CreateAt.Subtract(DateTime.Now).Minutes > 20)
+                        user = db.FirstOrDefault<TB_User>("where Email=@0", info.Target);
+                        if (!user.EmailValid)
                         {
-                            message = "Verification code failure，Please get it again";
+                            user.EmailValid = true;
+                            user.EmailValidAt = DateTime.Now;
+                            user.Update();
                         }
-                        else
-                        {
-                            user = db.FirstOrDefault<TB_User>("where Email=@0", info.Target);
-                            if (!user.EmailValid)
-                            {
-                                user.EmailValid = true;
-                                user.EmailValidAt = DateTime.Now;
-                                user.Update();
-                            }
-                            return true;
-                        }
-                    }
-                    else
-                    {
-                        message = "Verifying code is wrong";
-                        return false;
-                    }
-                }
+                        return true;
+            }
 
 
-            }
-            catch (Exception ex)
-            {
-                message = ex.Message;
-            }
+            
             return false;
         }
 
