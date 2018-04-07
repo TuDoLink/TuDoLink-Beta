@@ -88,7 +88,7 @@ namespace TudolinkWeb.Utils
                 return true;
             }
         }
-        public static string SendMail(string topic, string attachmentUrl, string body, string email)
+        public static string SendMail(string topic, string email)
         {
             AppConfig config = new AppConfig();
 
@@ -147,7 +147,7 @@ namespace TudolinkWeb.Utils
         /// <param name="message">返回信息(失效，超时...)</param>
         /// <param name="message">返回错误信息</param>
         /// <returns>是否正确</returns>
-        public static bool CheckEmailVerfyCode(string code, out TB_User user, out string message)
+        public static bool CheckEmailVerfyCode(string code, out string message)
         {
             user = null;
             message = string.Empty;
@@ -205,7 +205,7 @@ namespace TudolinkWeb.Utils
         /// <param name="message">返回信息(失效，超时...)</param>
         /// <param name="message">返回错误信息</param>
         /// <returns>是否正确</returns>
-        public static bool SendMobileRegisterSucces(string mobile, string pwd, out string message)
+        public static bool SendMobileRegisterSucces(string mobile, out string message)
         {
             message = string.Empty;
             try
