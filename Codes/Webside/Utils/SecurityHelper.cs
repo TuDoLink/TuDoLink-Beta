@@ -189,7 +189,7 @@ namespace TudolinkWeb.Utils
         /// <param name="key"> 密钥 </param>
         /// <param name="encoding"> 字符编码 </param>
         /// <returns></returns>
-        public static string HMACSMD5Encrypt(string input, string key, Encoding encoding)
+        public static string HMACSMD5Encrypt(string input,  Encoding encoding)
         {
             return HashEncrypt(new HMACMD5(encoding.GetBytes(key)), input, encoding);
         }
@@ -205,7 +205,7 @@ namespace TudolinkWeb.Utils
         /// <param name="key"> 密钥 </param>
         /// <param name="encoding"> 字符编码 </param>
         /// <returns></returns>
-        public static string HMACSHA1Encrypt(string input, string key, Encoding encoding)
+        public static string HMACSHA1Encrypt(string input,  Encoding encoding)
         {
             return HashEncrypt(new HMACSHA1(encoding.GetBytes(key)), input, encoding);
         }
@@ -237,7 +237,7 @@ namespace TudolinkWeb.Utils
         /// <param name="key"> 密钥 </param>
         /// <param name="encoding"> 字符编码 </param>
         /// <returns></returns>
-        public static string HMACSHA384Encrypt(string input, string key, Encoding encoding)
+        public static string HMACSHA384Encrypt(string input, Encoding encoding)
         {
             return HashEncrypt(new HMACSHA384(encoding.GetBytes(key)), input, encoding);
         }
@@ -275,7 +275,7 @@ namespace TudolinkWeb.Utils
         /// <param name="key"> 密钥 </param>
         /// <param name="encoding"> 字符编码 </param>
         /// <returns></returns>
-        public static string HMACSHA512Encrypt(string input, string key, Encoding encoding)
+        public static string HMACSHA512Encrypt(string input, Encoding encoding)
         {
             return HashEncrypt(new HMACSHA512(encoding.GetBytes(key)), input, encoding);
         }
