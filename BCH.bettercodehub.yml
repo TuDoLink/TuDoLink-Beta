@@ -1,4 +1,4 @@
 -name:java
   production
-    include:
-    -.*/main/.*\.jv
+    exinclude:
+    AppConfig.cs
