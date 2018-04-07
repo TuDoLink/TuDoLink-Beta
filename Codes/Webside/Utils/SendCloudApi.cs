@@ -9,7 +9,7 @@ namespace TudolinkWeb.Utils
 {
     public class SendCloudApi
     {
-        public static bool Send(string mail, string subject, string html)
+        public static bool Send(string mail, string html)
         {
             String url = "http://sendcloud.sohu.com/webapi/mail.send.json";
 
