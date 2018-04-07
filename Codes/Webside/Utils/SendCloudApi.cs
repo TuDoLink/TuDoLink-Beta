@@ -28,29 +28,7 @@ namespace TudolinkWeb.Utils
                 List<KeyValuePair<String, String>> paramList = new List<KeyValuePair<String, String>>();
 
                 paramList.Add(new KeyValuePair<string, string>("api_user", api_user));
-                paramList.Add(new KeyValuePair<string, string>("api_key", api_key));
-                paramList.Add(new KeyValuePair<string, string>("from", "service@tudolink.org"));
-                paramList.Add(new KeyValuePair<string, string>("fromname", "ToduLink"));
-                paramList.Add(new KeyValuePair<string, string>("to", mail));
-                paramList.Add(new KeyValuePair<string, string>("subject", subject));
-                paramList.Add(new KeyValuePair<string, string>("html", html));
-
-                response = client.PostAsync(url, new FormUrlEncodedContent(paramList)).Result;
-                String result = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine("result:{0}", result);
                 return result.Contains("success");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("\nException Caught!");
-                Console.WriteLine("Message :{0} ", e.Message);
-            }
-            finally
-            {
-                if (null != client)
-                {
-                    client.Dispose();
-                }
             }
             return false;
         }
